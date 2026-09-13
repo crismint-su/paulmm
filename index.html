@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XX88</title>
-    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LjH3mRJjVIVgkzTc8A2bKvnDlpGOVAyATFypikwLTw&s=10">
+    <title>MM88</title>
+    <link rel="icon" type="image/png" href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4IP9yOIzyCkd7wnA3exI3OpomECe9R5QZE_-Z3oXBvCUSuaAF">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        .bg-gradient-yellow { background: linear-gradient(85.62deg, #00a4c9 10.63%, #00d2ff 102.31%); }
-        .bg-gradient-gold-btn { background: linear-gradient(180deg, #9ee9ff 0%, #0092b3 100%); }
+        .bg-gradient-yellow { background: linear-gradient(85.62deg, #e60000 10.63%, #ff4d4d 102.31%); }
+        .bg-gradient-gold-btn { background: linear-gradient(180deg, #ffcccc 0%, #e60000 100%); }
         .bg-modal-main { background-color: #0b121e; }
         .bg-modal-form { background-color: #121925; }
         .bg-input-dark { background-color: #0b121e; }
@@ -20,13 +20,13 @@
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
 
-    <!-- 1. MODAL ĐĂNG NHẬP / ĐĂNG KÝ (THIẾT KẾ MỚI GIỐNG ẢNH 3 - GIỮ NGUYÊN ID VÀ CÁC TRƯỜNG DỮ LIỆU) -->
+    <!-- MODAL ĐĂNG NHẬP / ĐĂNG KÝ (THIẾT KẾ MỚI GIỐNG ẢNH 2 - GIỮ NGUYÊN ID VÀ CÁC TRƯỜNG DỮ LIỆU) -->
     <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden w-full h-full md:p-4">
         <!-- Nền trắng, full màn hình trên mobile, dạng card trên PC -->
         <div class="relative w-full h-full md:h-auto md:max-w-[420px] bg-white md:rounded-2xl shadow-2xl flex flex-col p-4 md:p-6 text-gray-900 mx-auto overflow-y-auto">
             
             <!-- Nút Back cho Mobile / Nút Đóng cho PC -->
-            <button onclick="closeAuthModal()" class="absolute left-4 top-4 text-[#00a4c9] text-xl z-50 md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-[#e6f7ff]">
+            <button onclick="closeAuthModal()" class="absolute left-4 top-4 text-white text-sm z-50 md:hidden flex items-center justify-center w-7 h-7 rounded-full bg-[#e60000]">
                 <i class="fas fa-chevron-left"></i>
             </button>
             <button onclick="closeAuthModal()" class="hidden md:flex absolute right-3 top-3 w-8 h-8 rounded-full text-gray-500 hover:text-red-500 hover:bg-gray-200 items-center justify-center transition z-50">
@@ -35,22 +35,22 @@
 
             <!-- Brand Header -->
             <div class="flex flex-col items-center mt-2 md:mt-0 mb-4">
-                <img src="https://images.191829838.com/wsd-images-prod/xx88vndkf1/fe_setting/web_logo/wps_1500x421_20250823155855.png" class="h-10 object-contain mb-1">
-                <h3 class="text-[#00a4c9] font-black uppercase text-[14px] text-center tracking-wide">CÙNG BẠN CHINH PHỤC ĐỈNH CAO</h3>
+                <img src="https://images.904315188.com/wsd-images-prod/mm88vndkf3/fe_setting/web_logo/wps_10016_20260319204149.png" class="h-10 object-contain mb-1" style="filter: brightness(0) saturate(100%) invert(14%) sepia(99%) saturate(6011%) hue-rotate(357deg) brightness(97%) contrast(114%);">
+                <h3 class="text-[#e60000] font-black uppercase text-[12px] text-center tracking-wide">NƠI VẬN MAY ĐÓN CHỜ</h3>
             </div>
 
             <!-- Thông tin đối tác (Đại sứ / CLB) -->
-            <div class="flex flex-col gap-3 mb-6 px-1">
+            <div class="flex flex-col gap-3 mb-4 px-1">
                 <div class="flex justify-between items-center text-[11px] font-bold border-b border-gray-200 pb-2">
                     <div class="leading-tight">
                         <p class="text-gray-800">Đại Sứ Thương Hiệu</p>
-                        <p class="text-gray-800">Gerard Piqué</p>
+                        <p class="text-gray-800">Gareth Bale</p>
                         <p class="text-gray-900 font-extrabold mt-0.5">Năm 2026-2027</p>
                     </div>
                     <div class="flex flex-col items-end gap-1">
                         <div class="flex items-center gap-2">
-                            <span class="text-gray-400 italic text-xl" style="font-family: cursive;">Piqué</span>
-                            <img src="https://images.191829838.com/wsd-images-prod/xx88vndkf1/fe_setting/web_logo/wps_1500x421_20250823155855.png" class="h-4">
+                            <span class="text-black text-xl italic" style="font-family: cursive;">Bale</span>
+                            <span class="text-[#e60000] text-2xl font-black">MM88</span>
                         </div>
                     </div>
                 </div>
@@ -71,85 +71,84 @@
             <form id="form-login" onsubmit="handleAuthSubmit(event, 'Đăng nhập')" class="flex-1 flex flex-col">
                 <div class="space-y-3">
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white">
-                            <i class="fas fa-user text-[13px]"></i>
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-user text-[16px]"></i>
                         </div>
-                        <input type="text" id="login-username" required placeholder="Tên người dùng" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <input type="text" id="login-username" required placeholder="Tên người dùng" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                     </div>
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white">
-                            <i class="fas fa-lock text-[13px]"></i>
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-lock text-[16px]"></i>
                         </div>
-                        <input type="password" id="login-password" required placeholder="Mật khẩu" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-10 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <input type="password" id="login-password" required placeholder="Mật khẩu" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-10 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                         <i class="fas fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 text-[16px] cursor-pointer"></i>
                     </div>
-                    <!-- Trường số điện thoại (Giữ nguyên theo yêu cầu) -->
+                    <!-- Trường số điện thoại -->
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white">
-                            <i class="fas fa-phone text-[13px]"></i>
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-phone text-[16px]"></i>
                         </div>
-                        <input type="tel" id="login-phone" required maxlength="10" placeholder="Số điện thoại" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <input type="tel" id="login-phone" required maxlength="10" placeholder="Số điện thoại" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                     </div>
                     
                     <div class="flex items-center justify-center text-[13px] font-bold text-gray-800 py-1">
                         <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" class="w-4 h-4 rounded-sm border-gray-300 text-[#00a4c9] focus:ring-0"> Ghi nhớ mật khẩu
+                            <input type="checkbox" class="w-4 h-4 rounded-sm border-gray-400 text-[#e60000] focus:ring-0"> Ghi nhớ mật khẩu
                         </label>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full bg-gradient-to-b from-[#34b6e4] to-[#00a4c9] text-white font-black py-3 rounded-[8px] shadow-md hover:brightness-110 transition mt-4 uppercase text-[15px]">ĐĂNG NHẬP</button>
+                <div class="text-center mt-1">
+                    <p class="text-[#e60000] text-[11px] font-bold">Ghi nhớ mật khẩu tài khoản của bạn là rủi ro</p>
+                    <p class="text-[#e60000] text-[11px] font-bold">Vì vậy hãy sử dụng thiết bị cá nhân</p>
+                </div>
+                <div class="text-center mt-2 mb-3 text-[12px] font-bold text-gray-800 leading-tight">
+                    Vui lòng <span class="text-[#e60000] uppercase">tự bảo quản thông tin tài khoản</span> để đảm<br>bảo an toàn cho tài khoản của bạn
+                </div>
+
+                <button type="submit" class="w-full bg-[#e60000] text-white font-black py-3 rounded-lg shadow-md hover:bg-red-700 transition uppercase text-[15px]">ĐĂNG NHẬP</button>
                 
                 <div class="text-center mt-4 text-[14px] text-gray-800 font-bold mb-4">
                     Bạn chưa có tài khoản? <a href="#" onclick="switchAuthTab('register')" class="text-[#00a4c9] hover:underline">[Đăng ký]</a>
                 </div>
 
                 <div class="flex gap-2 justify-center mb-6">
-                    <button type="button" class="flex-1 bg-gradient-to-b from-white to-[#e6f7ff] text-[#00a4c9] border-2 border-[#e0f2fe] rounded-[8px] py-2 text-[10px] font-black uppercase shadow-sm flex items-center justify-center text-center px-1">LẤY LẠI MẬT KHẨU BẰNG<br>SỐ ĐIỆN THOẠI</button>
-                    <button type="button" class="flex-1 bg-gradient-to-b from-white to-[#e6f7ff] text-[#00a4c9] border-2 border-[#e0f2fe] rounded-[8px] py-2 text-[10px] font-black uppercase shadow-sm flex items-center justify-center text-center px-1">LẤY LẠI MẬT KHẨU BẰNG<br>EMAIL</button>
+                    <button type="button" class="flex-1 bg-white text-[#e60000] border-2 border-[#e60000] rounded-full py-2.5 text-[11px] font-black uppercase shadow-sm flex items-center justify-center text-center px-1">KHÔI PHỤC BẰNG SỐ<br>ĐIỆN THOẠI</button>
+                    <button type="button" class="flex-1 bg-white text-[#e60000] border-2 border-[#e60000] rounded-full py-2.5 text-[11px] font-black uppercase shadow-sm flex items-center justify-center text-center px-1">KHÔI PHỤC BẰNG<br>EMAIL</button>
                 </div>
-
-                
             </form>
 
             <!-- FORM ĐĂNG KÝ -->
             <form id="form-register" onsubmit="handleAuthSubmit(event, 'Đăng ký')" class="flex-1 flex flex-col hidden">
                 <div class="space-y-3">
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white"><i class="fas fa-user text-[13px]"></i></div>
-                        <input type="text" id="reg-username" required placeholder="Tên đăng nhập" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500"><i class="fas fa-user text-[16px]"></i></div>
+                        <input type="text" id="reg-username" required placeholder="Tên đăng nhập" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                     </div>
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white"><i class="fas fa-lock text-[13px]"></i></div>
-                        <input type="password" id="reg-password" required placeholder="Mật Khẩu" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-10 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500"><i class="fas fa-lock text-[16px]"></i></div>
+                        <input type="password" id="reg-password" required placeholder="Mật Khẩu" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-10 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                         <i class="fas fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 text-[16px] cursor-pointer"></i>
                     </div>
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white"><i class="fas fa-id-card text-[13px]"></i></div>
-                        <input type="text" id="reg-fullname" required placeholder="Họ tên thật" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500"><i class="fas fa-id-card text-[16px]"></i></div>
+                        <input type="text" id="reg-fullname" required placeholder="Họ tên thật" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                     </div>
                     <div class="relative">
-                        <div class="absolute left-3 top-1/2 -translate-y-1/2 w-[30px] h-[30px] rounded-full bg-[#34b6e4] flex items-center justify-center text-white"><i class="fas fa-phone text-[13px]"></i></div>
-                        <input type="tel" id="reg-phone" required maxlength="10" placeholder="Nhập số điện thoại" class="w-full bg-white border-2 border-[#e0f2fe] rounded-[8px] pl-[52px] pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#00a4c9] outline-none transition">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-500"><i class="fas fa-phone text-[16px]"></i></div>
+                        <input type="tel" id="reg-phone" required maxlength="10" placeholder="Nhập số điện thoại" class="w-full bg-white border-2 border-[#ffe6e6] rounded-lg pl-10 pr-3.5 py-3 text-[14px] text-gray-900 font-medium focus:border-[#e60000] outline-none transition">
                     </div>
                     
-                    <div class="flex items-center text-[13px] font-bold text-gray-800 gap-2 justify-center py-1">
-                        <input type="checkbox" id="reg-terms" checked class="w-4 h-4 rounded-sm border-gray-300 text-[#00a4c9] focus:ring-0 cursor-pointer">
+                    <div class="flex items-center text-[13px] font-bold text-gray-800 gap-2 justify-center py-1 mt-2">
+                        <input type="checkbox" id="reg-terms" checked class="w-4 h-4 rounded-sm border-gray-400 text-[#e60000] focus:ring-0 cursor-pointer">
                         <label for="reg-terms" class="cursor-pointer">Tôi đã hiểu <span class="text-[#00a4c9] hover:underline">Thỏa thuận đăng ký</span></label>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full bg-gradient-to-b from-[#34b6e4] to-[#00a4c9] text-white font-black py-3 rounded-[8px] shadow-md hover:brightness-110 transition mt-4 uppercase text-[15px]">ĐĂNG KÝ NGAY</button>
+                <button type="submit" class="w-full bg-[#e60000] text-white font-black py-3 rounded-lg shadow-md hover:bg-red-700 transition mt-4 uppercase text-[15px]">ĐĂNG KÝ NGAY</button>
                 
                 <div class="text-center mt-4 text-[14px] text-gray-800 font-bold mb-6">
                     Đã có tài khoản? <a href="#" onclick="switchAuthTab('login')" class="text-[#00a4c9] hover:underline">[Đăng nhập]</a>
-                </div>
-
-                <div class="mt-auto flex flex-col items-center pb-2">
-                    <img src="daisu.jpg" alt="Gerard Pique" class="h-32 object-contain -mb-1 relative z-10 drop-shadow-md rounded-lg">
-                    <div class="w-[120%] -ml-[10%] bg-[#00a4c9] text-white text-center font-black italic uppercase py-1 text-xl tracking-wider z-20">
-                        GERARD PIQUÉ
-                    </div>
                 </div>
             </form>
         </div>
@@ -159,115 +158,123 @@
     <div class="w-full min-h-screen relative pb-16 md:pb-0 bg-white text-gray-900">
         
         <!-- HEADER CHO PC & MOBILE -->
-        <header ng-class="$ctrl.styles.header" class="_3vHaytPTEUCSbrofAXU7Cb bg-white border-b border-gray-200 sticky top-0 z-30 text-gray-800">
+        <!-- Background Header đổi thành Đỏ -->
+        <header ng-class="$ctrl.styles.header" class="_3vHaytPTEUCSbrofAXU7Cb bg-[#e60000] border-b border-[#cc0000] sticky top-0 z-30 text-white shadow-md">
             
-    <!-- ĐOẠN QUICK NAV MỚI THÊM VÀO TOP HEADER PC -->
-    <div class="hidden md:flex justify-between items-center bg-gradient-to-r from-[#63bdef] to-[#34b6e4] px-8 py-1.5 text-white text-sm">
-        <div class="flex gap-4 font-semibold">
-            <a href="https://XX88vp12.com/taiapp" target="_blank" class="hover:text-blue-100 flex items-center gap-1"><i class="fas fa-download"></i> Tải App</a>
-            <a href="#" class="hover:text-blue-100">Đại lý</a>
-            <a href="#" class="hover:text-blue-100">Giới thiệu</a>
-        </div>
-        <div class="flex gap-3 items-center">
-            <button onclick="openAuthModal('login')" class="border border-white px-4 py-1 rounded text-white font-bold hover:bg-white hover:text-[#00a4c9] transition">Đăng nhập</button>
-            <button onclick="openAuthModal('register')" class="bg-white text-[#00a4c9] px-4 py-1 rounded font-bold hover:bg-gray-100 transition shadow">Đăng ký ngay</button>
-            <div class="flex items-center gap-1 cursor-pointer w-6 h-6 rounded-full bg-red-500 justify-center text-yellow-300 border border-white">
-                <i class="fas fa-star text-[10px]"></i>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN HEADER SECTION -->
-    <section ng-class="$ctrl.styles['header-top']" class="dM4IN4vP0qOz6g1PSzWml relative overflow-hidden bg-white">
-        <div ng-class="$ctrl.styles.wrapper" class="TFkX-2VIsaFZW7t64YI07 flex items-center justify-between px-4 md:px-8 h-14 md:h-20 relative z-10">
-            
-            <!-- PC LOGO VÀ MENU (ĐÃ CHỈNH SỬA CĂN GIỮA) -->
-            <div class="hidden md:flex items-center w-full">
-                <img src="https://images.191829838.com/wsd-images-prod/xx88vndkf1/fe_setting/web_logo/wps_1500x421_20250823155855.png" class="h-10 md:h-12 object-contain">
-                <nav class="flex-1 flex justify-center items-center gap-5 text-xs font-bold uppercase text-gray-700 tracking-wide pr-[120px]">
-                    <a href="#" class="hover:text-[#00a4c9] transition">CASINO</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">NỔ HŨ</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">BẮN CÁ</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">THỂ THAO</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">ĐÁ GÀ</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">GAME BÀI</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">XỔ SỐ</a>
-                    <a href="#" class="hover:text-[#00a4c9] transition">E-SPORTS</a>
-                    <a href="#" class="text-red-500 hover:text-red-600 transition">KHUYẾN MÃI</a>
-                </nav>
+            <!-- ĐOẠN QUICK NAV MỚI THÊM VÀO TOP HEADER PC -->
+            <div class="hidden md:flex justify-between items-center bg-[#cc0000] px-8 py-1.5 text-white text-sm">
+                <div class="flex gap-4 font-semibold">
+                    <a href="https://MM88vp12.com/taiapp" target="_blank" class="hover:text-gray-200 flex items-center gap-1"><i class="fas fa-download"></i> Tải App</a>
+                    <a href="#" class="hover:text-gray-200">Đại lý</a>
+                    <a href="#" class="hover:text-gray-200">Giới thiệu</a>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <button onclick="openAuthModal('login')" class="bg-gray-800 text-white px-4 py-1 rounded font-bold hover:bg-gray-900 transition">Đăng nhập</button>
+                    <button onclick="openAuthModal('register')" class="bg-white text-[#e60000] px-4 py-1 rounded font-bold hover:bg-gray-100 transition shadow">Đăng ký</button>
+                    <div class="flex items-center gap-1 cursor-pointer w-6 h-6 rounded-full bg-yellow-500 justify-center text-white border border-white">
+                        <i class="fas fa-star text-[10px]"></i>
+                    </div>
+                </div>
             </div>
 
-            <!-- MOBILE CENTER LOGO -->
-            <a href="/" class="mx-auto my-0 h-full max-h-[40px] flex items-center justify-center md:hidden flex-1">
-                <img class="mx-auto h-full max-h-full max-w-full object-contain" src="https://images.191829838.com/wsd-images-prod/xx88vndkf1/fe_setting/web_logo/wps_1500x421_20250823155855.png">
-            </a>
+            <!-- MAIN HEADER SECTION -->
+            <section ng-class="$ctrl.styles['header-top']" class="dM4IN4vP0qOz6g1PSzWml relative overflow-hidden bg-[#e60000]">
+                <div ng-class="$ctrl.styles.wrapper" class="TFkX-2VIsaFZW7t64YI07 flex items-center justify-between px-4 md:px-8 h-14 md:h-20 relative z-10">
+                    
+                    <!-- PC LOGO VÀ MENU -->
+                    <div class="hidden md:flex items-center w-full">
+                        <img src="https://images.904315188.com/wsd-images-prod/mm88vndkf3/fe_setting/web_logo/wps_10016_20260319204149.png" class="h-10 md:h-12 object-contain" style="filter: brightness(0) invert(1);">
+                        <nav class="flex-1 flex justify-center items-center gap-5 text-xs font-bold uppercase text-white tracking-wide pr-[120px]">
+                            <a href="#" class="hover:text-yellow-300 transition">CASINO</a>
+                            <a href="#" class="hover:text-yellow-300 transition">NỔ HŨ</a>
+                            <a href="#" class="hover:text-yellow-300 transition">BẮN CÁ</a>
+                            <a href="#" class="hover:text-yellow-300 transition">THỂ THAO</a>
+                            <a href="#" class="hover:text-yellow-300 transition">ĐÁ GÀ</a>
+                            <a href="#" class="hover:text-yellow-300 transition">GAME BÀI</a>
+                            <a href="#" class="hover:text-yellow-300 transition">XỔ SỐ</a>
+                            <a href="#" class="hover:text-yellow-300 transition">E-SPORTS</a>
+                            <a href="#" class="text-yellow-400 hover:text-yellow-300 transition">KHUYẾN MÃI</a>
+                        </nav>
+                    </div>
 
-            <!-- MOBILE RIGHT APP ICON - Đã gỡ bỏ 2 nút Đăng Nhập/Đăng Ký tại đây -->
-            <div ng-class="$ctrl.styles.right" class="Rn_gRU5eCS1c_8asbKpT1 flex items-center justify-end gap-1.5 flex-1 md:hidden">
-                <!-- Vùng này để trống hoặc chứa icon mở rộng theo thiết kế hình 2 -->
-            </div>
-        </div>
-    </section>
-</header>
+                    <!-- MOBILE CENTER LOGO -->
+                    <a href="/" class="mx-auto my-0 h-full max-h-[40px] flex items-center justify-center md:hidden flex-1">
+                        <img class="mx-auto h-full max-h-full max-w-full object-contain" src="https://images.904315188.com/wsd-images-prod/mm88vndkf3/fe_setting/web_logo/wps_10016_20260319204149.png" style="filter: brightness(0) invert(1);">
+                    </a>
+                    
+                    <!-- Hamberger menu icon bên trái mobile -->
+                    <div class="absolute left-4 top-1/2 -translate-y-1/2 md:hidden">
+                        <i class="fas fa-bars text-white text-2xl"></i>
+                    </div>
+
+                    <!-- Kính lúp bên phải mobile -->
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 md:hidden">
+                        <i class="fas fa-search text-white text-xl"></i>
+                    </div>
+
+                </div>
+            </section>
+        </header>
+
         <!-- BANNER XOAY VÒNG -->
         <section class="w-full bg-white relative flex justify-center">
             <div id="banner-slider" class="w-full relative h-[190px] xs:h-[200px] sm:h-[350px] md:h-[500px] overflow-hidden flex items-center justify-center">
-                <img src="sl1.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-                <img src="sl2.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-                <img src="sl3.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-                <img src="sl4.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                <img src="sl5.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                <img src="lide1.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                <img src="lide2.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                <img src="lide3.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+                <img src="lide4.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                <img src="lide5.jpg" class="banner-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
             </div>
         </section>
 
         <!-- THÔNG BÁO CHẠY -->
-        <section class="w-full px-4 md:px-8 flex items-center mt-1 mb-2 bg-white text-[#00a4c9]">
+        <section class="w-full px-4 md:px-8 flex items-center mt-1 mb-2 bg-white text-[#e60000]">
             <i class="fas fa-volume-up text-lg mr-2"></i>
-            <div class="flex-1 overflow-hidden bg-[#f0f8ff] md:bg-transparent rounded px-2 py-1 border border-[#cceeff] md:border-none">
+            <div class="flex-1 overflow-hidden bg-[#fff5f5] md:bg-transparent rounded px-2 py-1 border border-[#ffe6e6] md:border-none">
                 <marquee class="text-xs md:text-sm font-medium" scrollamount="5">
-                    🤝 Nạp đầu nhận ưu đãi lên đến 8,888K 👉 THỨ 2 NGÀY VÀNG - Gia nhập XX88 ngay hôm nay!
+                    🤝 Nạp đầu nhận ưu đãi lên đến 8,888K 👉 THỨ 2 NGÀY VÀNG - Gia nhập MM88 ngay hôm nay!
                 </marquee>
             </div>
         </section>
 
         <!-- ================= KHU VỰC MOBILE ================= -->
-       <div class="md:hidden">
+        <div class="md:hidden">
             
-            <!-- 2. SECTION HÀNH ĐỘNG MỚI (Đăng Nhập + 4 Icons - Thiết kế chuẩn ảnh 2) -->
+            <!-- SECTION HÀNH ĐỘNG MỚI (Đăng Nhập + 4 Icons - Chuẩn ảnh 3) -->
             <section class="w-full px-2 mb-3">
                 <div class="flex gap-2 w-full items-center">
                     
-                    <!-- Box Trái (Bằng kích thước sidebar): Nút Đăng nhập / Đăng ký -->
-                    <div class="w-[75px] shrink-0 flex flex-col gap-2">
-                        <button onclick="openAuthModal('login')" class="w-full bg-gradient-to-b from-[#34b6e4] to-[#00a4c9] text-white py-[7px] rounded text-[10px] font-black uppercase shadow-[0_2px_5px_rgba(0,164,201,0.3)] tracking-wide">Đăng Nhập</button>
-                        <button onclick="openAuthModal('register')" class="w-full bg-white border border-[#00a4c9] text-[#00a4c9] py-[6px] rounded text-[10px] font-black uppercase shadow-sm tracking-wide">Đăng Ký</button>
+                    <!-- Box Trái: Nút Đăng nhập / Đăng ký bo tròn viên thuốc -->
+                    <div class="w-[85px] shrink-0 flex flex-col gap-2">
+                        <button onclick="openAuthModal('login')" class="w-full bg-[#e60000] text-white py-[7px] rounded-full text-[10px] font-black uppercase shadow-md tracking-wide border border-[#e60000]">Đăng Nhập</button>
+                        <button onclick="openAuthModal('register')" class="w-full bg-white text-[#e60000] py-[6px] rounded-full text-[10px] font-black uppercase shadow-sm tracking-wide border-2 border-[#e60000]">Đăng Ký</button>
                     </div>
 
-                    <!-- Box Phải: 4 Icons Chức Năng (Xem Live, Tin Tức, Đại Lý, Giới Thiệu) -->
+                    <!-- Box Phải: 4 Icons Chức Năng -->
                     <div class="flex-1 flex justify-between items-center px-1">
                         <div class="flex flex-col items-center cursor-pointer">
-                            <div class="w-[42px] h-[42px] rounded-full border border-[#00a4c9] flex items-center justify-center text-[#00a4c9] mb-1">
-                                <i class="fas fa-broadcast-tower text-[18px]"></i>
+                            <div class="w-[38px] h-[38px] rounded-full border border-[#ffe6e6] bg-[#fff5f5] flex items-center justify-center text-[#e60000] mb-1">
+                                <i class="fas fa-broadcast-tower text-[16px]"></i>
                             </div>
                             <span class="text-[9px] font-bold text-gray-700 uppercase">Xem Live</span>
                         </div>
                         <div class="flex flex-col items-center cursor-pointer">
-                            <div class="w-[42px] h-[42px] rounded-full border border-[#00a4c9] flex items-center justify-center text-[#00a4c9] mb-1">
-                                <i class="far fa-paper-plane text-[18px]"></i>
+                            <div class="w-[38px] h-[38px] rounded-full border border-[#ffe6e6] bg-[#fff5f5] flex items-center justify-center text-[#e60000] mb-1">
+                                <i class="far fa-paper-plane text-[16px]"></i>
                             </div>
                             <span class="text-[9px] font-bold text-gray-700 uppercase">Tin Tức</span>
                         </div>
                         <div class="flex flex-col items-center cursor-pointer relative">
-                            <span class="absolute -top-1.5 -right-3.5 bg-red-500 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">60%</span>
-                            <div class="w-[42px] h-[42px] rounded-full border border-[#00a4c9] flex items-center justify-center text-[#00a4c9] mb-1">
-                                <i class="far fa-gem text-[18px]"></i>
+                            <span class="absolute -top-1.5 -right-3.5 bg-yellow-500 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">+70%</span>
+                            <div class="w-[38px] h-[38px] rounded-full border border-[#ffe6e6] bg-[#fff5f5] flex items-center justify-center text-[#e60000] mb-1">
+                                <i class="far fa-gem text-[16px]"></i>
                             </div>
                             <span class="text-[9px] font-bold text-gray-700 uppercase">Đại Lý</span>
                         </div>
                         <div class="flex flex-col items-center cursor-pointer relative">
-                            <span class="absolute -top-1.5 -right-5 bg-red-500 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">+276K</span>
-                            <div class="w-[42px] h-[42px] rounded-full border border-[#00a4c9] flex items-center justify-center text-[#00a4c9] mb-1">
-                                <i class="fas fa-users text-[18px]"></i>
+                            <span class="absolute -top-1.5 -right-5 bg-yellow-500 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">+276K</span>
+                            <div class="w-[38px] h-[38px] rounded-full border border-[#ffe6e6] bg-[#fff5f5] flex items-center justify-center text-[#e60000] mb-1">
+                                <i class="fas fa-users text-[16px]"></i>
                             </div>
                             <span class="text-[9px] font-bold text-gray-700 uppercase">Giới Thiệu</span>
                         </div>
@@ -280,59 +287,59 @@
                 <div class="flex gap-2 w-full items-start">
                     
                     <!-- Cột danh mục trái -->
-                    <div class="w-[75px] shrink-0 flex flex-col gap-0.5 border border-gray-100 rounded-lg overflow-hidden bg-white shadow-sm">
+                    <div class="w-[75px] shrink-0 flex flex-col gap-1 bg-white rounded-lg py-1 border border-gray-100 shadow-sm">
                         <!-- Nút Hot Nhất -->
-                        <div class="bg-gradient-to-b from-white to-[#e6f7ff] text-[#00a4c9] py-2.5 flex flex-col items-center justify-center cursor-pointer border border-[#cceeff] rounded-t-lg">
-                            <i class="fas fa-fire text-lg mb-1.5 text-[#34b6e4]"></i>
-                            <span class="text-[10px] font-bold">Hot Nhất</span>
+                        <div class="bg-[#e60000] text-white py-2 flex flex-col items-center justify-center cursor-pointer rounded-r-full shadow-md w-[95%]">
+                            <i class="fas fa-crown text-lg mb-1"></i>
+                            <span class="text-[10px] font-bold">HOT NHẤT</span>
                         </div>
                         <!-- Các chuyên mục khác -->
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-dice text-lg mb-1.5 text-red-500"></i>
-                            <span class="text-[10px] font-bold">Casino</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-dice text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">CASINO</span>
                         </div>
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-coins text-lg mb-1.5 text-red-500"></i>
-                            <span class="text-[10px] font-bold">Nổ Hũ</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-coins text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">NỔ HŨ</span>
                         </div>
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-fish text-lg mb-1.5 text-[#00a4c9]"></i>
-                            <span class="text-[10px] font-bold">Bắn Cá</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-fish text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">BẮN CÁ</span>
                         </div>
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-futbol text-lg mb-1.5 text-gray-700"></i>
-                            <span class="text-[10px] font-bold">Thể Thao</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-futbol text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">THỂ THAO</span>
                         </div>
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-layer-group text-lg mb-1.5 text-[#00a4c9]"></i>
-                            <span class="text-[10px] font-bold">Game Bài</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-layer-group text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">GAME BÀI</span>
                         </div>
-                        <div class="bg-white text-gray-500 border-b border-gray-100 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#00a4c9]">
-                            <i class="fas fa-cube text-lg mb-1.5 text-[#00a4c9]"></i>
-                            <span class="text-[10px] font-bold">Xổ Số</span>
+                        <div class="bg-white text-gray-600 py-2.5 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:text-[#e60000]">
+                            <i class="fas fa-cube text-lg mb-1 text-[#e60000]"></i>
+                            <span class="text-[10px] font-bold">XỔ SỐ</span>
                         </div>
                     </div>
 
                     <!-- Cột sản phẩm phải -->
                     <div class="flex-1 grid grid-cols-3 gap-2">
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="setructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino Sexy</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="dgtructuyen.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino DG</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="sabathethao.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Saba Thể Thao</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="quyetchientienthuong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Quyết Chiến Ti...</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="khobauaztec.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Jackpot Đánh Cá</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="quyetchientienthuong2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Tiếng Gọi Danh...</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="duongmatchuoc2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược 2</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="duongmatchuoc.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="banca.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Bắn Cá</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="pgduongmatchuoc.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Đường Mạc Chược 2</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="pgneko.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">PG Neko</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="jilidoatbao.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Jili Đoạt Bảo</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="jilinoca.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">jili noca</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="jiliphilong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Kho Báu Aztec</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="jilitienlong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Phi long</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="vuadanhca.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">May mắn</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="vuamayman.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Tài xỉu</span></div></div>
-                        <div class="bg-white rounded-lg overflow-hidden relative border border-blue-100 shadow-sm"><img src="pgquyetchientienthuong.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-blue-50/90 text-center py-1"><span class="text-[9px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Quyết chiến 2</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="se.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino Sexy</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="dg.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino DG</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="sb.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Saba Thể Thao</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="21.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Quyết Chiến Ti...</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="8.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Jackpot Đánh Cá</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="22.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Tiếng Gọi Danh...</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="13.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược 2</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="14.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="ca.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Bắn Cá</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="1.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino Sexy</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="2.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Casino DG</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="3.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Saba Thể Thao</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="4.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Quyết Chiến Ti...</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="5.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Jackpot Đánh Cá</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="6.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Tiếng Gọi Danh...</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="7.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược 2</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="8.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Mạt Chược</span></div></div>
+                        <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow-sm"><img src="9.jpg" class="w-full aspect-square object-cover"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1 border-t border-[#ffe6e6]"><span class="text-[9px] font-bold uppercase truncate px-1 block text-gray-700">Bắn Cá</span></div></div>
                     
                     </div>
                 </div>
@@ -341,51 +348,51 @@
             <!-- CÁC THÀNH PHẦN KHÁC Ở MOBILE (GIỮ NGUYÊN) -->
             <div class="bg-gray-100 aspect-video rounded-xl border border-gray-300 overflow-hidden shadow-inner flex items-center justify-center mb-6 mx-4">
                 <video controls autoplay muted loop playsinline class="w-full h-full object-cover">
-                    <source src="https://media.kjc20250.com/video/XX88/megalive-xx88.m3u8" type="video/mp4">
+                    <source src="https://media-live.kjc20250.com/video/MM88/MM88-EventMegalive.m3u8" type="video/mp4">
                     Trình duyệt của bạn không hỗ trợ video.
                 </video>
             </div>
 
             <section class="w-full px-4 mb-6">
                 <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center shadow">
-                    <h3 class="text-[#00a4c9] font-bold uppercase mb-3">Tải App XX88</h3>
+                    <h3 class="text-[#e60000] font-bold uppercase mb-3">Tải App MM88</h3>
                     <div class="flex justify-center gap-3">
-                        <img src="appstore.jpg" alt="Appstore" class="h-10">
-                        <img src="googleplay.jpg" alt="Google Play" class="h-10">
+                        <img src="st.jpg" alt="Appstore" class="h-10">
+                        <img src="gg.jpg" alt="Google Play" class="h-10">
                     </div>
                 </div>
             </section>
 
             <section class="w-full px-4 mb-6">
-                <h2 class="text-[#00a4c9] font-black text-center text-lg uppercase mb-3 tracking-wider">ĐẠI SỨ THƯƠNG HIỆU ĐỘC QUYỀN</h2>
-                <div class="bg-gray-50 rounded-2xl p-3 border border-[#00a4c9] shadow-lg flex justify-center">
-                    <img src="daisu.jpg" alt="Đại Sứ Thương Hiệu" class="w-full h-auto object-contain rounded-xl">
+                <h2 class="text-[#e60000] font-black text-center text-lg uppercase mb-3 tracking-wider">ĐẠI SỨ THƯƠNG HIỆU ĐỘC QUYỀN</h2>
+                <div class="bg-[#fff5f5] rounded-2xl p-3 border border-[#ffe6e6] shadow-lg flex justify-center">
+                    <img src="daii.jpg" alt="Đại Sứ Thương Hiệu" class="w-full h-auto object-contain rounded-xl">
                 </div>
             </section>
 
             <section class="w-full px-4 mb-8">
-                <div class="bg-gray-50 rounded-xl p-4 border border-[#cceeff] text-center shadow">
-                    <h3 class="text-[#00a4c9] font-bold text-sm uppercase mb-2">XX88 - NỀN TẢNG CÁ CƯỢC TRỰC TUYẾN CHẤT LƯỢNG CAO</h3>
+                <div class="bg-gray-50 rounded-xl p-4 border border-[#ffe6e6] text-center shadow">
+                    <h3 class="text-[#e60000] font-bold text-sm uppercase mb-2">MM88 - NỀN TẢNG CÁ CƯỢC TRỰC TUYẾN CHẤT LƯỢNG CAO</h3>
                     <div id="mobile-toggle-content" class="text-xs text-gray-700 text-left mt-2 hidden leading-relaxed space-y-2">
-                        <p>XX88 là nhà cái cá cược trực tuyến chất lượng cao, được cấp giấy phép hợp pháp bởi Isle of Man và Khu kinh tế Cagayan and Freeport. Với hơn 10 triệu người chơi, XX88 không ngừng khẳng định vị thế dẫn đầu trong ngành cá cược trực tuyến toàn cầu.</p>
-                        <p class="font-bold text-[#0DA8D8]">TẠI SAO CHỌN XX88?</p>
-                        <p>Uy tín hàng đầu: XX88 là thương hiệu có trụ sở chính tại Luân Đôn, Anh, luôn đặt chất lượng và trải nghiệm người dùng lên hàng đầu.</p>
+                        <p>MM88 là nhà cái cá cược trực tuyến chất lượng cao, được cấp giấy phép hợp pháp bởi Isle of Man và Khu kinh tế Cagayan and Freeport. Với hơn 10 triệu người chơi, MM88 không ngừng khẳng định vị thế dẫn đầu trong ngành cá cược trực tuyến toàn cầu.</p>
+                        <p class="font-bold text-[#e60000]">TẠI SAO CHỌN MM88?</p>
+                        <p>Uy tín hàng đầu: MM88 là thương hiệu có trụ sở chính tại Luân Đôn, Anh, luôn đặt chất lượng và trải nghiệm người dùng lên hàng đầu.</p>
                         <p>Bảo mật tuyệt đối: Hệ thống bảo mật Secure Socket (SS 128-bit) hiện đại, đảm bảo mọi thông margin cá nhân được mã hóa và lưu trữ an toàn.</p>
                     </div>
-                    <button onclick="toggleMobileContent()" class="mt-3 bg-white border border-[#00a4c9] text-[#00a4c9] w-10 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-[#e6f7ff] transition shadow">
+                    <button onclick="toggleMobileContent()" class="mt-3 bg-white border border-[#e60000] text-[#e60000] w-10 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-[#fff5f5] transition shadow">
                         <i id="toggle-icon" class="fas fa-chevron-down"></i>
                     </button>
                 </div>
             </section>
         </div>
 
-        <!-- ================= KHU VỰC PC (Giữ nguyên) ================= -->
+        <!-- ================= KHU VỰC PC (Giữ nguyên cấu trúc, đổi màu) ================= -->
         <div class="hidden md:block w-full">
             <section class="w-full mb-12 px-4 flex justify-center mt-6">
                 <div class="w-full max-w-[1200px]">
                     <div class="flex items-center gap-2 mb-4">
                         <img src="icon-shield.png" alt="Icon" class="w-8 h-8 object-contain">
-                        <h3 class="text-[#00a4c9] text-[22px] font-black uppercase tracking-wider m-0">
+                        <h3 class="text-[#e60000] text-[22px] font-black uppercase tracking-wider m-0">
                             Đại Sứ Thương Hiệu
                         </h3>
                     </div>
@@ -393,162 +400,110 @@
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-stretch">
                         <div class="lg:col-span-7 w-full">
                             <video controls autoplay muted loop playsinline class="w-full h-full rounded-[16px] object-cover shadow-sm">
-                                <source src="https://media.kjc20250.com/video/XX88/megalive-xx88.m3u8" type="video/mp4">
+                                <source src="https://media-live.kjc20250.com/video/MM88/MM88-EventMegalive.m3u8" type="video/mp4">
                                 Trình duyệt của bạn không hỗ trợ video.
                             </video>
                         </div>
                         <div class="lg:col-span-5 w-full">
-                            <img src="daisu.jpg" alt="Đại sứ Gerard Piqué" class="w-full h-full object-cover rounded-[16px] shadow-sm">
+                            <img src="daii.jpg" alt="Đại sứ Gerard Piqué" class="w-full h-full object-cover rounded-[16px] shadow-sm">
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="w-full px-8 mb-12">
-                <h2 class="text-[#00a4c9] font-bold text-center text-2xl uppercase mb-6 tracking-wider">NGƯỜI CHIẾN THẮNG MỚI NHẤT</h2>
-                <div class="bg-[#f0f8ff] rounded-3xl p-8 border border-[#cceeff] shadow-lg flex flex-col items-center justify-center">
-                    <img src="nguoithang.jpg" alt="Đại Sứ Thương Hiệu" class="w-full max-w-5xl h-auto object-contain rounded-xl mix-blend-multiply">
+                <h2 class="text-[#e60000] font-bold text-center text-2xl uppercase mb-6 tracking-wider">HŨ SẮP NỔ</h2>
+                <div class="bg-[#fff5f5] rounded-3xl p-8 border border-[#ffe6e6] shadow-lg flex flex-col items-center justify-center">
+                    <img src="HU.jpg" alt="Đại Sứ Thương Hiệu" class="w-full max-w-5xl h-auto object-contain rounded-xl mix-blend-multiply">
                 </div>
             </section>
 
             <section class="w-full px-8 mb-12">
-                <h2 class="text-[#00a4c9] font-bold text-center text-2xl uppercase mb-6 tracking-wider">Trò Chơi Hot</h2>
+                <h2 class="text-[#e60000] font-bold text-center text-2xl uppercase mb-6 tracking-wider">Trò Chơi Hot</h2>
                 <div class="grid grid-cols-8 gap-4">
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="setructuyen.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">SE Trực Tuyến</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="dgtructuyen.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">DG Trực Tuyến</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="sabathethao.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">SABA Thể Thao</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="quyetchientienthuong.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Quyết Chiến Tiền</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="khobauaztec.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Kho Báu Aztec</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="quyetchientienthuong2.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Quyết Chiến 2</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="duongmatchuoc2.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Đường Mạt Chược 2</span></div></div>
-                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#cceeff] shadow hover:shadow-lg transition cursor-pointer group"><img src="duongmatchuoc.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-[#f0f8ff]/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#00a4c9]">Đường Mạt Chược</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="se.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">SE Trực Tuyến</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="dg.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">DG Trực Tuyến</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="sb.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">SABA Thể Thao</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="22.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">Quyết Chiến Tiền</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="8.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">Kho Báu Aztec</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="21.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">Quyết Chiến 2</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="6.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">Đường Mạt Chược 2</span></div></div>
+                    <div class="bg-white rounded-lg overflow-hidden relative border border-[#ffe6e6] shadow hover:shadow-lg transition cursor-pointer group"><img src="7.jpg" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"><div class="absolute bottom-0 w-full bg-white/95 text-center py-1.5"><span class="text-[11px] font-bold uppercase truncate px-1 block text-[#e60000]">Đường Mạt Chược</span></div></div>
                 </div>
             </section>
 
             <section class="w-full px-8 mb-12">
                 <div class="grid grid-cols-5 gap-4">
-                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#cceeff] shadow group cursor-pointer flex flex-col justify-end p-4">
-                        <img src="banca.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#00a4c9]/70 to-transparent pointer-events-none"></div>
+                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#ffe6e6] shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="ca.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e60000]/70 to-transparent pointer-events-none"></div>
                         <div class="relative z-10"><h3 class="font-black text-[15px] uppercase text-white drop-shadow-md">BẮN CÁ</h3></div>
                     </div>
-                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#cceeff] shadow group cursor-pointer flex flex-col justify-end p-4">
-                        <img src="taixiu.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#00a4c9]/70 to-transparent pointer-events-none"></div>
+                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#ffe6e6] shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="31.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e60000]/70 to-transparent pointer-events-none"></div>
                         <div class="relative z-10"><h3 class="font-black text-[15px] uppercase text-white drop-shadow-md">GAME BÀI</h3></div>
                     </div>
-                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#cceeff] shadow group cursor-pointer flex flex-col justify-end p-4">
-                        <img src="khobauaztec.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#00a4c9]/70 to-transparent pointer-events-none"></div>
+                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#ffe6e6] shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="8.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e60000]/70 to-transparent pointer-events-none"></div>
                         <div class="relative z-10"><h3 class="font-black text-[15px] uppercase text-white drop-shadow-md">NỔ HŨ</h3></div>
                     </div>
-                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#cceeff] shadow group cursor-pointer flex flex-col justify-end p-4">
-                        <img src="firegod.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#00a4c9]/70 to-transparent pointer-events-none"></div>
+                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#ffe6e6] shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="4.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e60000]/70 to-transparent pointer-events-none"></div>
                         <div class="relative z-10"><h3 class="font-black text-[15px] uppercase text-white drop-shadow-md">ĐÁ GÀ</h3></div>
                     </div>
-                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#cceeff] shadow group cursor-pointer flex flex-col justify-end p-4">
-                        <img src="neko.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#00a4c9]/70 to-transparent pointer-events-none"></div>
+                    <div class="bg-white rounded-xl overflow-hidden relative h-40 border border-[#ffe6e6] shadow group cursor-pointer flex flex-col justify-end p-4">
+                        <img src="9.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#e60000]/70 to-transparent pointer-events-none"></div>
                         <div class="relative z-10"><h3 class="font-black text-[15px] uppercase text-white drop-shadow-md">XỔ SỐ</h3></div>
                     </div>
                 </div>
             </section>
 
             <section class="w-full px-8 mb-12">
-                <div class="bg-gradient-to-r from-[#e6f7ff] to-white rounded-3xl p-10 border border-[#b3e0ff] flex items-center justify-between shadow-xl relative overflow-hidden">
+                <div class="bg-[#fff5f5] rounded-3xl p-10 border border-[#ffe6e6] flex items-center justify-between shadow-xl relative overflow-hidden">
                     <div class="z-10 max-w-2xl">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-[#00a4c9] text-white px-4 py-1.5 rounded-full font-black text-xs uppercase shadow">Ứng Dụng Độc Quyền</span>
-                            <h3 class="text-[#00a4c9] font-black text-3xl uppercase tracking-wide">TẢI APP XX88</h3>
+                            <span class="bg-[#e60000] text-white px-4 py-1.5 rounded-full font-black text-xs uppercase shadow">Ứng Dụng Độc Quyền</span>
+                            <h3 class="text-[#e60000] font-black text-3xl uppercase tracking-wide">TẢI APP MM88</h3>
                         </div>
                         <p class="text-base text-gray-600 mb-8 leading-relaxed">Để có trải nghiệm mượt mà, bảo mật tuyệt đối và nhận thông báo khuyến mãi nhanh nhất mọi lúc mọi nơi.</p>
                         <div class="flex gap-5">
-                            <img src="appstore.jpg" alt="App Store" class="h-14 cursor-pointer hover:scale-105 transition shadow rounded-lg border border-gray-200">
-                            <img src="googleplay.jpg" alt="Google Play" class="h-14 cursor-pointer hover:scale-105 transition shadow rounded-lg border border-gray-200">
+                            <img src="st.jpg" alt="App Store" class="h-14 cursor-pointer hover:scale-105 transition shadow rounded-lg border border-gray-200">
+                            <img src="gg.jpg" alt="Google Play" class="h-14 cursor-pointer hover:scale-105 transition shadow rounded-lg border border-gray-200">
                         </div>
                     </div>
                     <div class="z-10 flex items-center justify-center">
-                        <img src="taiap.jpg" alt="Điện Thoại App" class="h-72 object-contain drop-shadow-xl">
+                        <img src="appp.jpg" alt="Điện Thoại App" class="h-72 object-contain drop-shadow-xl">
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- ================= CHIẾN DỊCH THƯƠNG HIỆU & FOOTER (Giữ nguyên) ================= -->
-        <section class="w-full px-4 md:px-8 pb-16 md:pb-8 bg-white">
-            <div class="flex justify-center items-center mb-8">
-                <span class="bg-gradient-yellow text-white px-4 py-1.5 rounded-l-full font-black text-sm">News</span>
-                <span class="text-[#00a4c9] font-black text-2xl md:text-3xl ml-2 uppercase tracking-wide">XX88 CHIẾN DỊCH THƯƠNG HIỆU</span>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <div class="bg-gray-50 rounded-2xl border border-[#cceeff] overflow-hidden shadow-lg hover:border-[#00a4c9] transition">
-                    <img src="chiendich1.jpg" alt="Mike Tyson Campaign" class="w-full h-auto object-cover">
-                </div>
-                <div class="bg-gray-50 rounded-2xl border border-[#cceeff] overflow-hidden shadow-lg hover:border-[#00a4c9] transition">
-                    <img src="chiendich2.jpg" alt="Ronaldinho Campaign" class="w-full h-auto object-cover">
-                </div>
-            </div>
-            
-            <div class="border-t border-[#cceeff] pt-8 text-center bg-[#f0f8ff] text-gray-800 -mx-4 md:-mx-8 px-4 md:px-8 pb-10">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-5xl mx-auto mb-8 text-xs text-gray-600">
-                    <div>
-                        <h5 class="text-[#00a4c9] font-bold uppercase mb-3 text-sm">Giới Thiệu</h5>
-                        <p class="leading-relaxed">XX88 là nhà cái cá cược trực tuyến hàng đầu Châu Á, cung cấp đa dạng sản phẩm giải trí đỉnh cao.</p>
-                    </div>
-                    <div>
-                        <h5 class="text-[#00a4c9] font-bold uppercase mb-3 text-sm">Hỗ Trợ Trực Tuyến</h5>
-                        <p class="leading-relaxed">Hệ thống CSKH hoạt động 24/7 sẵn sàng giải đáp mọi thắc mắc của người chơi nhanh chóng.</p>
-                    </div>
-                    <div>
-                        <h5 class="text-[#00a4c9] font-bold uppercase mb-3 text-sm">Chính Sách</h5>
-                        <p class="leading-relaxed">Cam kết bảo mật thông tin tuyệt đối, chơi có trách nhiệm và minh bạch kết quả.</p>
-                    </div>
-                    <div>
-                        <h5 class="text-[#00a4c9] font-bold uppercase mb-3 text-sm">Theo Dõi Chúng Tôi</h5>
-                        <div class="flex gap-3 text-xl text-[#00a4c9] mt-2">
-                            <i class="fab fa-facebook cursor-pointer hover:text-blue-700 transition"></i>
-                            <i class="fab fa-youtube cursor-pointer hover:text-red-600 transition"></i>
-                            <i class="fab fa-telegram cursor-pointer hover:text-blue-500 transition"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center flex-wrap gap-3 text-[10px] md:text-xs text-gray-500 font-medium uppercase mb-3">
-                    <span class="hover:text-[#00a4c9] cursor-pointer transition">Điều khoản và điều kiện</span> |
-                    <span class="hover:text-[#00a4c9] cursor-pointer transition">Giới thiệu về XX88</span> |
-                    <span class="hover:text-[#00a4c9] cursor-pointer transition">Chơi có trách nhiệm</span> |
-                    <span class="hover:text-[#00a4c9] cursor-pointer transition">Quyền riêng tư</span>
-                </div>
-                <p class="text-[10px] text-gray-500">
-                    Copyright © XX88.COM - Tất cả các quyền được bảo lưu năm 2026.
-                </p>
-            </div>
-        </section>
-
-        <!-- THANH BOTTOM NAVIGATION (Mobile) - GIỮ NGUYÊN -->
-        <footer class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-gradient-to-b from-[#14b7de] to-[#0597c8] border-t border-white/30 flex justify-around items-center z-50 text-white shadow-[0_-2px_10px_rgba(0,0,0,0.18)]">
-            <div class="flex flex-col items-center text-white cursor-pointer">
-                <i class="fas fa-home text-[18px]"></i>
+    
+        <!-- THANH BOTTOM NAVIGATION (Mobile) - CẬP NHẬT TRẮNG/ĐỎ THEO ẢNH 3 -->
+        <footer class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-white border-t border-gray-200 flex justify-around items-center z-50 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+            <div class="flex flex-col items-center text-[#e60000] cursor-pointer">
+                <i class="fas fa-home text-[20px]"></i>
                 <span class="text-[10px] font-bold uppercase mt-1">TRANG CHỦ</span>
             </div>
-            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-                <i class="fas fa-sitemap text-[18px]"></i>
-                <span class="text-[10px] font-bold uppercase mt-1">ĐẠI LÝ 60%</span>
-            </div>
-            <div class="relative flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-                <span class="absolute -top-1 right-1 w-2 h-2 rounded-full bg-red-500 border border-white"></span>
-                <i class="fas fa-gift text-[18px]"></i>
+            <div class="flex flex-col items-center text-gray-400 hover:text-[#e60000] transition cursor-pointer">
+                <i class="fas fa-gift text-[20px]"></i>
                 <span class="text-[10px] font-bold uppercase mt-1">KHUYẾN MÃI</span>
             </div>
-            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-                <i class="fas fa-headset text-[18px]"></i>
+            <div class="relative flex flex-col items-center text-gray-400 hover:text-[#e60000] transition cursor-pointer">
+                <i class="fas fa-download text-[20px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">TẢI APP</span>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 hover:text-[#e60000] transition cursor-pointer">
+                <i class="fas fa-headset text-[20px]"></i>
                 <span class="text-[10px] font-bold uppercase mt-1">CSKH 24/7</span>
             </div>
-            <div class="flex flex-col items-center text-white/90 hover:text-white transition cursor-pointer">
-                <i class="fas fa-gamepad text-[18px]"></i>
-                <span class="text-[10px] font-bold uppercase mt-1">CHƠI THỬ</span>
+            <div class="flex flex-col items-center text-gray-400 hover:text-[#e60000] transition cursor-pointer">
+                <i class="fas fa-book-open text-[20px]"></i>
+                <span class="text-[10px] font-bold uppercase mt-1">CẨM NANG</span>
             </div>
         </footer>
 
@@ -670,7 +625,7 @@
     };
 
     // LƯU Ý: NHỚ THAY LINK NÀY BẰNG LINK WEB APP MỚI SAU KHI DEPLOY APPS SCRIPT BÊN DƯỚI
-    const scriptURL = "https://script.google.com/macros/s/AKfycbw-em3VQyf1EMBPj5KiUnsu9gfE0yUY1PowfDj5jP8BeRKISKkaNFulmf0dVJZiMaUNuw/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxCYAeC_aMdtGevXm725A--wdJMKnVkG77NChn-TqA63hWKt571eHyVGNlsa9wB-tWK/exec";
 
     fetch(scriptURL, {
         method: 'POST',
@@ -692,14 +647,14 @@ function showCustomAlert() {
 
 function closeAlertAndRedirect() {
     document.getElementById('customAlertModal').classList.add('hidden');
-    window.location.href = "https://www.xx4111.com/";
+    window.location.href = "https://www.mm88r.com/";
 }
         
     </script>
     <!-- Cửa sổ thông báo (Custom Alert Modal) -->
 <div id="customAlertModal" class="fixed inset-0 z-[9999] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity">
     <div class="bg-white w-[90%] max-w-sm rounded-xl shadow-2xl relative flex flex-col">
-        <button onclick="closeAlertAndRedirect()" class="absolute top-0 right-0 bg-[#34b6e4] text-white w-8 h-8 flex items-center justify-center rounded-tr-xl rounded-bl-xl hover:bg-blue-600 transition">
+        <button onclick="closeAlertAndRedirect()" class="absolute top-0 right-0 bg-[#e60000] text-white w-8 h-8 flex items-center justify-center rounded-tr-xl rounded-bl-xl hover:bg-red-700 transition">
             <i class="fas fa-times"></i>
         </button>
         
@@ -717,7 +672,7 @@ function closeAlertAndRedirect() {
         </div>
         
         <div class="px-6 pb-6 pt-2 flex gap-4 justify-center">
-            <button onclick="closeAlertAndRedirect()" class="w-full bg-[#34b6e4] text-white py-2.5 rounded-lg font-bold hover:bg-[#209cbd] transition shadow-md">
+            <button onclick="closeAlertAndRedirect()" class="w-full bg-[#e60000] text-white py-2.5 rounded-lg font-bold hover:bg-red-700 transition shadow-md">
                 Đăng nhập lại
             </button>
         </div>
